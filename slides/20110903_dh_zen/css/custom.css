@@ -1,0 +1,71 @@
+#title-slide h1, #title-slide h2 ,#title-slide h3 {
+    font-family: 'Cabin Sketch', 'Trebuchet MS', sans-serif;
+    color: #fff;
+    text-shadow: 0px 0px 1px #ffffff,
+                 0px 0px  5px #0055AB,
+                 0px 0px 15px #0055AB;
+    line-height: 1.0em;
+    letter-spacing: 0.02em;
+}
+
+#title-slide h1 {
+    font-size: 96px;
+}
+#title-slide h2 {
+    font-size: 56px;
+}
+#title-slide h3 {
+    font-size: 40px;
+}
+
+li {
+    margin-top: 10px;
+    font-size: 28px;
+    padding: 0;
+}
+
+#webfonts-title h1, #zencoding-title h1 {
+    font-size: 144px;
+    font-family: 'Monofett', cursive;
+}
+
+#zentext {
+    width: 95%;
+    font-size: 200%;
+    height: 14em;
+}
+
+.zentext-filename{
+    font-size: 20px;
+}
+
+.sample-link{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.endroll{
+  font-family: 'Yellowtail', cursive;
+  font-size: 120px;
+}
+
+#whatfont-extension {
+  text-align: center;
+}
+#GoogleFontPreviewer-extension {
+  text-align: center;
+}
+
+.zencoding-title h1{
+  font-size: 56px;
+}
+
+#zencte-title h1 {
+    font-size: 144px;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+#zencte-title h2 {
+    font-size: 96px;
+    font-family: 'Mountains of Christmas', cursive;
+}

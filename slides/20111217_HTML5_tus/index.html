@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+<!--
+  2011/12/17
+  http://bit.ly/html5tus
+  Modified by @sada_h http://twitter.com/sada_h
+-->
+
+<html>
+  <head>
+    <title>HTML5 これまでと、これから</title>
+    <meta charset='utf-8'>
+
+    <meta property='og:url' content='http://sada-samplecode.googlecode.com/svn/trunk/slides/20111217_HTML5_tus/' />
+    <meta property='og:title' content='HTML5 これまでと、これから' />
+    <meta property='og:site_name' content='HTML5 これまでと、これから' />
+    <meta property='og:description' content='これまでの HTML5 策定の流れと、最近の状況をまとめした。また後半では多くのサンプルからHTML5の機能を紹介します。' />
+    <meta property='og:type' content='website' />
+    <meta property='og:image' content='http://sada-samplecode.googlecode.com/svn/trunk/slides/20111217_HTML5_tus/images/ogimage.jpg' />
+    <meta property='og:locale' content='ja_JP' />
+
+    <script src='./slides.js'></script>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Cabin+Sketch:bold|Monofett|Mountains+of+Christmas|Yellowtail" rel="stylesheet" type="text/css" />
+    <style>
+      article.fill h1 {
+        line-height: 1.2em;
+        background: rgba(255, 255, 255, .75);
+        padding-top: .2em;
+        padding-bottom: .3em;
+        margin-left: -60px;
+        padding-left: 60px;
+        margin-right: -60px;
+        padding-right: 60px;
+      }
+
+      .slides.template-html5 > article:not(.nobackground):not(.biglogo) {
+        background: url(images/HTML5_Badge_64.png) 810px 615px no-repeat;  
+
+        background-color: white;  
+      } 
+
+      .slides.template-html5 > article.past {
+        display: block;
+        opacity: 0.25;
+        transform: scale(0.8) translate(-1120px);
+        -o-transform: scale(0.8) translate(-1120px);
+        -moz-transform: scale(0.8) translate(-1120px);
+        -webkit-transform: scale(0.8) translate3d(-1120px, 0, 0);
+      }
+
+      .slides.template-html5 > article.next {
+        display: block;
+        opacity: 0.25;
+        transform: scale(0.8) translate(1120px);
+        -o-transform: scale(0.8) translate(1120px);
+        -moz-transform: scale(0.8) translate(1120px);
+        -webkit-transform: scale(0.8) translate3d(1120px, 0, 0);
+      }
+
+      .slides.template-html5 article.biglogo {
+        background: white url(images/HTML5_sticker.png) 50% 50% no-repeat;
+      }
+
+      .slides.template-html5 .blue {
+        color: rgb(75,172,198);
+      }
+      .slides.template-html5 .yellow {
+        color: rgb(247,150,70);
+      }
+      .slides.template-html5 .green {
+        color: rgb(155,187,89);
+      }
+      .slides.template-html5 .red {
+        color: rgb(220,80,77);
+      }
+      .slides.template-html5 .black {
+        color: black;
+      }
+      .slides.template-html5 .white {
+        color: white;
+      }
+    </style>
+  </head>
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-html5'>
+
+      <article>
+        <strong style="font-size: 60px; line-height: 1.5em;">
+          [←] [→] to move on.<br>
+          Google Chrome 16 over<br>
+          <a href="http://bit.ly/html5tus">http://bit.ly/html5tus</a>
+        </strong>
+      </article>
+
+      <article class='fill'>
+        <h1>
+          HTML5<br>
+          これまでと、これから
+        </h1>
+        <p>
+          <img src='images/top.png'>
+        </p>
+        <p style="text-align: right; margin-top: 100px;">
+          ひらい さだあき<br>
+          2011/12/17<br>
+          @Tokyo Univercity of Science / Noda Campus<br>
+          <a href="http://bit.ly/html5tus">http://bit.ly/html5tus</a>
+        </p>
+      </article>
+
+
+      <article>
+        <h3>
+          Agenda
+        </h3>
+        <ul>
+          <li>Profile</li>
+          <li>History</li>
+          <li>HTML5</li>
+          <li>Samples</li>
+          <li>まとめ</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Profile
+        </h3>
+        <ul>
+          <li>ひらい さだあき</li>
+          <ul>
+            <li><a href="http://about.me/sada_h" target="_blank">about.me/sada_h</a> / <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a> / <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
+          </ul>
+          <li>執筆</li>
+          <ul>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/ux/d89clip29/01.html" target="_blank">Google Developer Day 2011 Japanレポート - ＠IT</a></li>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/webfonts01/01.html" target="_blank">インストールせずに、好きなWeb Fontsを使おう ─ ＠IT</a></li>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/zencoding01/01.html" target="_blank">もしも10分の1の行数でHTMLが書けたら ＠IT</a></li>
+          </ul>
+          <li>登壇</li>
+          <ul>
+            <li><a href="http://gihyo.jp/news/report/01/chrome-html5-conference/0007?page=2" target="_blank">「Chrome+HTML5 Conference～第20回記念HTML5とか勉強会スペシャル～」レポート：ライトニングトークレポート｜gihyo.jp … 技術評論社</a></li>          
+          </ul>
+        </ul>
+      </article>
+
+      <article class='fill'>
+        <h3 style="margin-top: 8em; text-align: right; font-size: 60px;">
+          History
+        </h3>
+        <p>
+          <img src='images/history.jpg'>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          ウェブの進化
+        </h3>
+        <p>
+          <a href="http://evolutionofweb.appspot.com/" target="_blank"><img style='height: 500px' src='images/evoweb.png' alt="The evolution of the web - ウェブの進化"></a>
+        </p>
+        <div class='source'>
+          <a href="http://evolutionofweb.appspot.com/" target="_blank">The evolution of the web - ウェブの進化</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          W3C 仕様策定の流れ
+        </h3>
+        <ul>
+          <li>作業草稿（Working Draft, WD）</li>
+          <li>最終草案（Last Call Working Draft）<br>
+            <span class="yellow">HTML5 は、いまここ</span>
+          </li>
+          <li>勧告候補（Candidate Recommendation, CR）</li>
+          <li>勧告案（Proposed Recommendation, PR）</li>
+          <li>W3C勧告（W3C Recommendation, REC）</li>
+        </ul>
+        <div class='source'>
+          <a href="http://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank">World Wide Web Consortium - Wikipedia</a><br>
+          <a href="http://ja.wikipedia.org/wiki/W3C%E5%8B%A7%E5%91%8A" target="_blank">W3C勧告 - Wikipedia</a>
+        </div>
+      </article>
+
+      <article class="">
+        <h3>
+          HTMLの歴史
+        </h3>
+        <table>
+          <tr> <th>Year <th>Spec <th>Topic
+          <tr> <td>1993 <td>HTML 1.0<td>IEFT標準化
+          <tr> <td>1997 <td>HTML 3.2 <td>W3C勧告 W3Cではじめての勧告
+          <tr> <td>1997 <td>HTML 4.0 <td>W3C勧告
+          <tr> <td>1999 <td>HTML 4.0.1 <td>W3C勧告
+          <tr> <td>2000 <td>XHTML 1.0 <td>W3C勧告 HTML 4.0.1をXMLで再定義
+          <tr> <td>2001 <td>XHTML 1.1 <td>W3C勧告 機能をモジュール化
+          <tr> <td>2007 <td>HTML5 <td>W3Cで検討開始(WG設立)
+          <tr> <td>2009 <td>XHTML 2.0 <td>XHTML2 WG 活動停止
+          <tr> <td>2011 <td>HTML5 <td>W3C 最終草案
+        </table>
+        <div class='source'>
+          <a href="http://ja.wikipedia.org/wiki/HyperText_Markup_Language" target="_blank">HyperText Markup Language - Wikipedia</a><br>
+          <a href="http://ja.wikipedia.org/wiki/Extensible_HyperText_Markup_Language" target="_blank">Extensible HyperText Markup Language - Wikipedia</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          WHATWG
+        </h3>
+        <p>Web Hypertext Application Technology Working Group
+        <p>2004年に <span class="red">Apple</span>、<span class="yellow">Mozilla</span>、<span class="blue">Opera</span> が WHATWG 設立
+        <p>ブラウザベンダーはWebアプリケーションのために、HTMLを拡張したかった。
+        <p>W3Cはあまり興味を示さなかった。
+        <p><span class="green">Web Applications 1.0 / Web Forms 2.0</span> を WHATWG が策定
+      </article>
+
+      <article class="smaller">
+        <q>
+          It is necessary to evolve HTML incrementally. The attempt to get the world to switch to XML, including quotes around attribute values and slashes in empty tags and namespaces all at once didn't work. 
+        </q>
+        <div class='author'>
+          Tim Berners-Lee
+        </div>
+        <div class='source'>
+          <a href="http://dig.csail.mit.edu/breadcrumbs/node/166" target="_blank">Reinventing HTML | Decentralized Information Group (DIG) Breadcrumbs</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          HTML5
+        </h3>
+        <p>2007年、W3C HTML Working Group設立</p>
+        <p><span class="green">Web Applications 1.0</span>をベースに、HTML5としての標準化を推進</p>
+        <p>W3Cより、2008年01月22日に HTML5 の最初の草案が発表</p>
+        <ul>
+          <li>アプリケーション</li>
+          <li>セマンティクス</li>
+          <li>後方互換性</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          HTML5 Abstract
+        </h3>
+        <p style="font-size:1.2em;line-height:1.5em;">
+          This specification defines the 5th major revision of the core language of the World Wide Web: the Hypertext Markup Language (HTML). In this version, <span class="red">new features are introduced to help Web application authors</span>, <span class="blue">new elements are introduced based on research into prevailing authoring practices</span>, <span class="green">and special attention has been given to defining clear conformance criteria for user agents in an effort to improve interoperability.</span>
+        </p>
+        <div class='source'>
+          <a href="http://www.w3.org/TR/html5/" target="_blank">HTML5</a>
+        </div>
+      </article>
+
+      <article class='fill'>
+        <h3 style="margin-top: 8em; text-align: right; font-size: 60px;">
+          HTML5
+        </h3>
+        <p>
+          <img src='images/html5_top.jpg'>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          どこまでHTML5?
+        </h3>
+        <p style="text-align: center">
+
+          <img style='height: 160px;' src="images/HTML5_Semantics_256.png" alt="Semantics" title="Semantics" />
+          <img style='height: 160px;' src="images/HTML5_Offiline_Storage_256.png" alt="Offiline Storage" title="Offiline Storage" />
+          <img style='height: 160px;' src="images/HTML5_Device_Access_256.png" alt="Device Access" title="Device Access" />
+          <img style='height: 160px;' src="images/HTML5_Connectivity_256.png" alt="Connectivity" title="Connectivity" /><br>
+          <img style='height: 160px;' src="images/HTML5_Multimedia_256.png" alt="Multimedia" title="Multimedia" />
+          <img style='height: 160px;' src="images/HTML5_3D_Effects_256.png" alt="3D Effects" title="3D Effects" />
+          <img style='height: 160px;' src="images/HTML5_Performance_256.png" alt="Performance" title="Performance" />
+          <img style='height: 160px;' src="images/HTML5_Styling_256.png" alt="Styling" title="Styling" /><br>
+          <img src="images/html5_all.png">
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          どこまでHTML5?
+        </h3>
+        <p style="text-align: center">
+          <img style='height: 500px;' src='images/html5_renge1.png'>
+        </p>
+        <div class='source'>
+          <a href="http://www.slideshare.net/dynamis/html-browsers" target="_blank">HTML & Browsers</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          どこまでHTML5?
+        </h3>
+        <p style="text-align: center">
+          <img style='height: 500px;' src='images/html5_renge2.png'>
+        </p>
+        <div class='source'>
+          <a href="http://www.slideshare.net/dynamis/html-browsers" target="_blank">HTML & Browsers</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>SEMANTICS</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Semantics_256.png" alt="Semantics" title="Semantics" />
+        </p>
+        <p>Giving meaning to structure, semantics are front and center with HTML5. A richer set of tags, along with RDFa, microdata, and microformats, are enabling a more useful, data driven web for both programs and your users.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>OFFLINE & STORAGE</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Offiline_Storage_256.png" alt="Offiline Storage" title="Offiline Storage" />
+        </p>
+        <p>Web Apps can start faster and work even if there is no internet connection, thanks to the HTML5 App Cache, as well as the Local Storage, Indexed DB, and the File API specifications.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>DEVICE ACCESS</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Device_Access_256.png" alt="Device Access" title="Device Access" />
+        </p>
+        <p>Beginning with the Geolocation API, Web Applications can present rich, device-aware features and experiences. Incredible device access innovations are being developed and implemented, from audio/video input access to microphones and cameras, to local data such as contacts & events, and even tilt orientation.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>CONNECTIVITY</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Connectivity_256.png" alt="Connectivity" title="Connectivity" />
+        </p>
+        <p>More efficient connectivity means more real-time chats, faster games, and better communication. Web Sockets and Server-Sent Events are pushing (pun intended) data between client and server more efficiently than ever before.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>MULTIMEDIA</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Multimedia_256.png" alt="Multimedia" title="Multimedia" />
+        </p>
+        <p>Audio and video are first class citizens in the HTML5 web, living in harmony with your apps and sites. Lights, camera, action!</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>3D, GRAPHICS & EFFECTS</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_3D_Effects_256.png" alt="3D Effects" title="3D Effects" />
+        </p>
+        <p>Between SVG, Canvas, WebGL, and CSS3 3D features, you're sure to amaze your users with stunning visuals natively rendered in the browser.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>PERFORMANCE & INTEGRATION</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Performance_256.png" alt="Performance" title="Performance" />
+        </p>
+        <p>Make your Web Apps and dynamic web content faster with a variety of techniques and technologies such as Web Workers and XMLHttpRequest 2. No user should ever wait on your watch.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>CSS3</h3>
+        <p style="text-align:center;">
+          <img src="images/HTML5_Styling_256.png" alt="Styling" title="Styling" />
+        </p>
+        <p>CSS3 delivers a wide range of stylization and effects, enhancing the web app without sacrificing your semantic structure or performance. Additionally Web Open Font Format (WOFF) provides typographic flexibility and control far beyond anything the web has offered before.</p>
+        <div class='source'>
+          <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          ブラウザの対応状況
+        </h3>
+        <ul>
+          <li>
+            <a href="http://html5readiness.com/" target="_blank">HTML5 Readiness</a>
+          </li>
+          <li>
+            <a href="http://caniuse.com/" target="_blank">When can I use... Support tables for HTML5, CSS3, etc</a>
+          </li>
+          <li>
+            <a href="http://mobilehtml5.org/" target="_blank">Mobile HTML5 - compatibility tables for iPhone, Android, BlackBerry, Symbian, iPad and other mobile devices</a>
+          </li>
+        </ul>
+      </article>
+
+
+      <article class='fill'>
+        <h3 style="margin-top: 5em; text-align: right; font-size: 60px;">
+          Samples
+        </h3>
+        <p>
+          <img src='images/samples.png'>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          HTML5Slides
+        </h3>
+        <p style="text-align: center">
+          <a href="http://code.google.com/p/html5slides/" target="_blank">
+            <img style='height: 450px;' src="images/html5slides.png" alt="html5slides"><br>
+            html5slides - A Google HTML5 slide template - Google Project Hosting
+          </a>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          Media Queries (Responsive Web Design)
+        </h3>
+        <ul>
+          <li>
+            <a href="http://mediaqueri.es/" target="_blank">Media Queries</a>
+          </li>
+          <li>
+            <a href="http://www.w3.org/" target="_blank">World Wide Web Consortium (W3C)</a>
+          </li>
+          <li>
+            <a href="http://dev.opera.com/labs" target="_blank">Labs - Dev.Opera</a>
+          </li>
+          <li>
+            <a href="http://hellofisher.com/" target="_blank">Hello Fisher - UX Design</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="smaller">
+        <h3>WebFonts & Canvas</h3>
+        <section>
+          <style>
+            #canvas-area {
+              background: white;
+              -webkit-border-radius: 8px;
+              -khtml-border-radius: 8px;
+              -moz-border-radius: 8px;
+              border-radius: 8px;
+              border: 1px solid #bbb;
+            }
+          </style>
+          <p class="sample-link"><a href="samples/webfonts_canvas.html" target="_blank">WebFonts Sample</a></p>
+          <canvas id="canvas-area" width="800" height="250"></canvas><br>
+          <button id="canvas-draw1">draw text 1</button>
+          <button id="canvas-draw2">draw text 2</button>
+          <button id="canvas-rotate">rotate</button>
+
+          <script>
+            var ctx = document.getElementById("canvas-area").getContext("2d");
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+              ctx.fillStyle = "red";
+              ctx.font = "72px 'Monofett', cursive";
+              ctx.fillText("WebFonts", 200, 50);
+            });
+
+            document.getElementById("canvas-draw2").addEventListener("click", function(event) {
+              ctx.fillStyle = "navy";
+              ctx.font = "72px 'Cabin Sketch', cursive";
+              ctx.fillText("WebFonts", 600, 50);
+            }, false);
+
+            document.getElementById("canvas-rotate").addEventListener("click", function(event) {
+              ctx.rotate(10 * Math.PI / 180);
+              ;
+            }, false);
+
+          </script>
+          <pre>var ctx = document.getElementById("canvas-area").getContext("2d");
+ctx.textAlign    = "center";
+ctx.textBaseline = "middle";
+document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+  ctx.fillStyle = "red";
+  ctx.font = <b>"72px 'Monofett', cursive";</b>
+  ctx.fillText("WebFonts", 400 , 50);
+});</pre>
+          <span style="font-family: 'Monofett';">&nbsp;</span>
+          <span style="font-family: 'Cabin Sketch';">&nbsp;</span>
+        </section>
+      </article>
+
+      <article>
+        <style>
+          #webgl-iframe {
+            border: none;
+            width: 800px;
+            height: 450px;
+          }
+        </style>
+        <header><h3>WebFonts & Canvas Effects</h3></header>
+        <section>
+          <p class="sample-link"><a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects</a> / <a href="samples/Text-WebFonts-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects + WebFonts</a><p>
+            <iframe name="canvas-effects" scrolling="yes" src="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" id="webgl-iframe"></iframe>
+          <p style="font-size:smaller">see also <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/" target="_blank">HTML5 Rocks - Typographic effects in canvas</a></p>
+        </section>
+      </article>
+
+      <article>
+        <h3>
+          WebGL Bookcase
+        </h3>
+        <p style="text-align: center">
+          <a href="http://workshop.chromeexperiments.com/bookcase/" target="_blank">
+            <img style='height: 450px;' src="images/webglbookcase.png" alt="WebGL Bookcase"><br>
+            WebGL Bookcase</a>
+        </p>
+      </article>
+
+      <article class="fill">
+        <iframe src="http://html5-demos.appspot.com/static/navigator.onLine.html"></iframe>
+        <div class='source'>
+          <a href="http://html5-demos.appspot.com/static/navigator.onLine.html" target="_blank">navigator.onLine test</a>
+        </div>
+      </article>
+
+      <article>
+        <style>
+          #speech-input-field {
+            width: 400px;
+            height: 50px;
+            padding: 10px 15px;
+            font-size: 155%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: 0;
+          }
+        </style>
+        <h3>Speech Input</h3>
+        <section>
+          <pre>&lt;input type="text" <b>x-webkit-speech</b> /&gt;</pre>
+          <div class="flex hbox boxcenter">
+            <div class="noflex vbox boxcenter" style="height:300px;text-align:center">
+              <input id="speech-input-field" type="text" x-webkit-speech />
+              <p style="display:none">Speech input is not enabled in your browser.<br>
+                Try running Google Chrome with the <code>--enable-speech-input</code> flag.</p>
+            </div>
+          </div>
+          <script>
+            if (!('webkitSpeech' in document.createElement('input'))) {
+              document.querySelector('#speech-input p').style.display = 'block';
+            }
+          </script>
+        </section>
+        <div class='source'>
+          <a href="http://slides.html5rocks.com/#speech-input" target="_blank">HTML5 Presentation</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          Page Visibility API
+        </h3>
+        <p style="text-align: center">
+          <a href="http://www.samdutton.com/pageVisibility/" target="_blank">
+            <img style='height: 500px;' src="images/PageVisibility.png"><br>
+            Using the Page Visibility API
+          </a>
+      </article>
+
+      <article>
+        <h3>
+          Fullscreen API
+        </h3>
+        <p style="text-align: center">
+          <a href="http://html5-demos.appspot.com/static/fullscreen.html" target="_blank">
+            <img style='height: 450px;' src="images/FullScreenAPI.png"><br>
+            Fullscreen API</a>
+      </article>
+
+      <article class="fill">
+        <iframe src="http://www.htmlfivewow.com/demos/hal/index.html"></iframe>
+        <div class='source'>
+          <a href="http://www.htmlfivewow.com/demos/hal/index.html" target="_blank">GAL 9000</a>
+        </div>
+      </article>
+
+      <article class="fill">
+        <iframe src="http://tokyo.bleedinghtml5.appspot.com/demos/audio-visualizer/index.html"></iframe>
+        <div class='source'>
+          <a href="http://tokyo.bleedinghtml5.appspot.com/demos/audio-visualizer/index.html" target="_blank">Chrome Audio Visualizer</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          HTML5 Terminal
+        </h3>
+        <p style="text-align: center">
+          <a href="http://www.htmlfivewow.com/demos/terminal/terminal.html" target="_blank">
+            <img style='height: 450px;' src="images/html5terminal.png" alt="HTML5 Terminal"><br>
+            HTML5 Terminal
+          </a>
+      </article>
+
+      <article class='fill'>
+        <h3 style="margin-top: 3em; text-align: right; font-size: 60px;">
+          まとめ
+        </h3>
+        <p>
+          <img src='images/conclusion.jpg'>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          HTML5 これまでと、これから。
+        </h3>
+        <ul class="build">
+          <li>
+            W3Cとブラウザベンダー、ブラウザの独自実装、いろいろありました。
+          </li>
+          <li>
+            標準を作るため、いまはみんなで協力している。
+          </li>
+          <li>
+            これまでとこれから、変化が大きいぶん、面白いかも。
+          </li>
+          <li>
+            まだ勧告にはなっていないけど、いろいろなところですでに使われている。
+          </li>
+          <li>
+            これからHTML5で、文書はよりセマンティックに
+          </li>
+          <li>
+            これからHTML5で、Webはもっとアプリケーションに
+          </li>
+        </ul>
+      </article>
+
+      <article class='biglogo'>
+        <div style="margin-top:1em;width:100%;" class="centered">
+          <strong>
+            Thank you. Any Questions?
+            <a href="http://bit.ly/html5tus" target="_blank">http://bit.ly/html5tus</a>
+          </strong>
+        </div>
+      </article>
+    </section>
+
+  </body>
+</html>

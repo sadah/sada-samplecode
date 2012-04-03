@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebFonts && SVG</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Cabin+Sketch:bold|Monofett" rel="stylesheet" type="text/css" />
+</head>
+<body>
+          <header><h1>WebFonts && Canvas</h1></header>
+          <section>
+            <style>
+              #canvas-area {
+                background: white;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                border: 1px solid #bbb;
+              }
+            </style>
+            <p class="sample-link"><a href="samples/webfonts_canvas.html" target="_blank">WebFonts Sample</a></p>
+            <canvas id="canvas-area" width="800" height="250"></canvas><br>
+            <button id="canvas-draw1">draw text 1</button>
+            <button id="canvas-draw2">draw text 2</button>
+            <button id="canvas-rotate">rotate</button>
+
+            <script>
+            var ctx = document.getElementById("canvas-area").getContext("2d");
+            ctx.textAlign    = "center";
+            ctx.textBaseline = "middle";
+            document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+              ctx.fillStyle = "red";
+              ctx.font = "72px 'Monofett', cursive";
+              ctx.fillText("WebFonts", 200 , 50);
+            });
+            
+            document.getElementById("canvas-draw2").addEventListener("click", function(event) {
+              ctx.fillStyle = "navy";
+              ctx.font = "72px 'Cabin Sketch', cursive";
+              ctx.fillText("WebFonts", 600 , 50);
+            }, false);
+            
+            document.getElementById("canvas-rotate").addEventListener("click", function(event) {
+              ctx.rotate( 10 * Math.PI / 180 );;
+            }, false);
+            </script>
+<pre>...
+var ctx = document.getElementById("canvas-area").getContext("2d");
+ctx.textAlign    = "center";
+ctx.textBaseline = "middle";
+document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+  ctx.fillStyle = "red";
+  ctx.font = <b>"72px 'Monofett', cursive";</b>
+  ctx.fillText("WebFonts", 400 , 50);
+});
+...</pre>
+          </section>
+<span style="font-family: 'Monofett';">&nbsp;</span>
+<span style="font-family: 'Cabin Sketch';">&nbsp;</span>
+</body>
+</html>

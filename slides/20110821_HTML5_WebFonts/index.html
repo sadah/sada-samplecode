@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2011 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Chrome DevRel Team (chrome-devrel@googlegroups.com)
+                 Alex Russell (slightlyoff@chromium.org)
+                 Brad Neuberg
+-->
+<!--
+  2011/08/21
+  Chrome+HTML5 Conference
+  Modified by sada_h http://twitter.com/sada_h
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title>Enjoy WebFonts!! - Chrome+HTML5 Conference</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Cabin+Sketch:bold|Monofett|Yellowtail" rel="stylesheet" type="text/css" />
+    <link id="prettify-link" href="src/prettify/prettify.css" rel="stylesheet" disabled />
+    <link href="css/moon.css" class="theme" rel="stylesheet" />
+    <link href="css/sand.css" class="theme" rel="stylesheet" />
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet" />
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+    <link href="css/common.css" rel="stylesheet" media="screen" />
+    <link href="css/custom.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    <nav id="helpers">
+      <button title="Previous slide" id="nav-prev" class="nav-prev">⇽</button> 
+      <button title="Jump to a random slide" id="slide-no">5</button> 
+      <button title="Next slide" id="nav-next" class="nav-next">⇾</button>
+      <menu>
+        <button type="checkbox" data-command="notes" title="View Slide Notes">✏</button>
+        <button type="checkbox" data-command="source" title="View slide source">↻</button>
+        <button type="checkbox" data-command="help" title="View Help">?</button>
+      </menu>
+    </nav>
+    <div class="presentation">
+      <div id="presentation-counter">Loading...</div>
+      <div class="slides">
+        <div class="slide" id="landing-slide">
+          <style>
+            #landing-slide p {
+              font-size: 35px;
+            }
+            p#disclaimer-message {
+              font-size: 20px;
+            }
+          </style>
+          <section class="middle">
+            <p>This presentation is an HTML5 website</p>
+            <p>Press <span id="left-init-key" class="key">&rarr;</span> key to advance.</p>
+            <p id="disclaimer-message">Having issues seeing the presentation? Read the <a href="disclaimer.html">disclaimer</a></p>
+          </section>
+          <aside class="note">
+            <section>
+              Welcome! (This field is for presenter notes and commentary.)
+            </section>
+          </aside> 
+        </div>
+
+        <div class="slide" id="controls-slide">
+          <header>Slides controls</header>
+          <style>
+            #controls-slide li, #controls-slide p {
+              font-size: 32px;
+            }
+            #controls-slide .key {
+              bottom: 2px;
+            }
+          </style>
+          <section>
+            <ul>
+              <li><span class="key">&larr;</span> and <span class="key">&rarr;</span> to move around.</li>
+              <li><span class="key">Ctrl/Command</span> and <span class="key">+</span> or <span class="key">-</span> to zoom in and out if slides don’t fit.</li>
+              <li><span class="key">S</span> to view page source.</li>
+              <li><span class="key">T</span> to change the theme.</li>
+              <li><span class="key">H</span> to toggle syntax highlight.</li>
+              <li><span class="key">N</span> to toggle speaker notes.</li>
+              <li><span class="key">3</span> to toggle 3D effect.</li>
+              <li><span class="key">0</span> to toggle help.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide" id="title-slide">
+          <section class="middle">
+            <hgroup>
+              <h1>
+                Enjoy WebFonts!!
+              </h1>
+              <h2>
+                Sadaaki HIRAI
+              </h2>
+              <h3>
+                Chrome+HTML5 Conference<br>2011/08/21
+              </h3>
+            </hgroup>
+          </section>
+        </div>
+
+        <div class="slide" id="profile">
+          <header>Profile</header>
+          <section>
+            <ul>
+              <li>ひらい さだあき</li>
+              <ul>
+                <li><a href="http://about.me/sada_h" target="_blank">about.me/sada_h</a> / <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a> / <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
+                <li>SIerで働いてます。Javaやってます。</li>
+              </ul>
+              </li>
+              <li>すきなAPI
+                <ul>
+                  <li>Web Storage / File API / Web Fonts</li>
+                </ul>
+              </li>
+              <li>Zen-Codingについて執筆しました
+                <ul>
+                  <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/zencoding01/01.html" target="_blank">もしも10分の1の行数でHTMLが書けたら ＠IT</a></li>
+                  <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/zencoding02/01.html" target="_blank">Zen-Codingを使いこなして、マークアップを楽しもう ＠IT</a></li>
+                </ul>
+              </li>
+              <li>Zen-Coding関連で作ったもの
+                <ul>
+                  <li>Chrome Extension : <a href="https://chrome.google.com/webstore/detail/iodhcpffklplnfaihoolhfbejbinhcgn" target="_blank">Zen-Coding Textarea Extension</a></li>
+                  <li>UserScript : <a href="http://userscripts.org/scripts/show/105015" target="_blank">Zen-Coding Textarea UserScript</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide transitionSlide" id="webfonts-title">
+          <section class="middle">
+            <h1>WebFonts</h1>
+          </section>
+        </div>
+
+        <div class="slide" id="webfonts-live">
+          <header><h1>Live Coding with Zen-Coding</h1></header>
+          <section>
+            <p class="sample-link">How to use WebFonts? / <a href="http://www.google.com/webfonts#ChoosePlace:select" target="_blank">Google Web Fonts</a> / <a href="samples/webfonts_live.html" target="_blank">WebFonts Sample</a></p>
+            <textarea id="zentext"></textarea><br>
+    		<input type="text" class="zentext-filename" id="zentext-filename" placeholder="a plain document" value="webfonts_live.html" ></input>
+	       	<button id="zentext-submit">Save</button>
+            <img src="http://zen-coding.ru/textarea/zc-powered.png" alt="Powered by Zen Coding" width="94" height="16" style="cursor: pointer;" onclick="zen_textarea.showInfo();"><br>
+            <p style="font-size:smaller">see also <a href="http://updates.html5rocks.com/2011/08/Saving-generated-files-on-the-client-side" target="_blank">Saving generated files on the client-side - HTML5Rocks Updates</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="webfonts-canvas">
+          <header><h1>WebFonts && Canvas</h1></header>
+          <section>
+            <style>
+              #canvas-area {
+                background: white;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                border: 1px solid #bbb;
+              }
+            </style>
+            <p class="sample-link"><a href="samples/webfonts_canvas.html" target="_blank">WebFonts Sample</a></p>
+            <canvas id="canvas-area" width="800" height="250"></canvas><br>
+            <button id="canvas-draw1">draw text 1</button>
+            <button id="canvas-draw2">draw text 2</button>
+            <button id="canvas-rotate">rotate</button>
+
+            <script>
+            var ctx = document.getElementById("canvas-area").getContext("2d");
+            ctx.textAlign    = "center";
+            ctx.textBaseline = "middle";
+            document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+              ctx.fillStyle = "red";
+              ctx.font = "72px 'Monofett', cursive";
+              ctx.fillText("WebFonts", 200 , 50);
+            });
+            
+            document.getElementById("canvas-draw2").addEventListener("click", function(event) {
+              ctx.fillStyle = "navy";
+              ctx.font = "72px 'Cabin Sketch', cursive";
+              ctx.fillText("WebFonts", 600 , 50);
+            }, false);
+            
+            document.getElementById("canvas-rotate").addEventListener("click", function(event) {
+              ctx.rotate( 10 * Math.PI / 180 );;
+            }, false);
+            </script>
+<pre>var ctx = document.getElementById("canvas-area").getContext("2d");
+ctx.textAlign    = "center";
+ctx.textBaseline = "middle";
+document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+  ctx.fillStyle = "red";
+  ctx.font = <b>"72px 'Monofett', cursive";</b>
+  ctx.fillText("WebFonts", 400 , 50);
+});</pre>
+          </section>
+        </div>
+
+        <div class="slide" id="webfonts-canvas-effects">
+          <style>
+            #webgl-iframe {
+              border: none;
+              width: 800px;
+              height: 450px;
+            }
+          </style>
+          <header><h1>WebFonts && Canvas Effects</h1></header>
+          <section>
+            <p class="sample-link"><a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects</a> / <a href="samples/Text-WebFonts-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects + WebFonts</a><p>
+            <iframe name="canvas-effects" scrolling="yes" src="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" id="webgl-iframe"></iframe>
+             <p style="font-size:smaller">see also <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/" target="_blank">HTML5 Rocks - Typographic effects in canvas</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="webfonts-svg">
+          <header><h1>WebFonts && SVG</h1></header>
+          <section>
+            <p class="sample-link"><a href="samples/webfonts_svg.html" target="_blank">WebFonts SVG Sample</a></p>
+            <svg width="800" height="300">
+            <defs>
+            <path id="circlePath" transform="translate(40,40) scale(2)"
+                d="M 50 0
+                C 75 0  100 25 100 50
+                C 100 75 75 100 50 100
+                C 25 100 0 75 0 50
+                C 0 25 25 0 50 0
+            z" />
+            </defs>
+            <g id="gtext" fill="#009900">
+                <text x="10" y="10" font-size="56" font-family="Monofett">
+                    <textPath xlink:href="#circlePath">Chrome+HTML5 Conference</textPath>
+                </text>
+            </g>
+            <use xlink:href="#circlePath" fill="none" stroke="red" />
+            </svg><br>
+            <button id="svg-scale">scale change</button>
+            <script>
+            var svgChanged = false;
+            document.getElementById("svg-scale").addEventListener("click", function(){
+                if(!svgChanged){
+                    document.getElementById("circlePath").setAttribute("transform", "translate(40,40) scale(4)");
+                    document.getElementById("gtext").setAttribute("transform", "scale(1)");
+                    svgChanged = true;
+                }else{
+                    document.getElementById("circlePath").setAttribute("transform", "translate(40,40) scale(2)");
+                    document.getElementById("gtext").setAttribute("transform", "scale(1)");
+                    svgChanged = false;
+                }
+            }, false);
+            </script>
+<pre>&lt;g&nbsp;id=&quot;gtext&quot;&nbsp;fill=&quot;#009900&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&nbsp;x=&quot;10&quot;&nbsp;y=&quot;10&quot;&nbsp;font-size=&quot;56&quot;&nbsp;<b>font-family=&quot;Monofett&quot;&gt;</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;textPath&nbsp;xlink:href=&quot;#circlePath&quot;&gt;Chrome+HTML5&nbsp;Conference&lt;/textPath&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/text&gt;
+&lt;/g&gt;</pre>
+            <p style="font-size:smaller">see also <a href="http://gihyo.jp/dev/feature/01/svg/0003?page=2" target="_blank">スタートアップ SVG：第3回　少し高度なSVG｜gihyo.jp … 技術評論社</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="whatfont-extension">
+          <header>WhatFont</header>
+          <section>
+            <p><a href="https://chrome.google.com/webstore/detail/jabopobgcpjmedljpbcaablpmlmfcogm" target="_blank"><img src="images/whatfont.png" alt="WhatFont"></a></p>
+            <p class="sample-link"><a href="samples/webfonts_extension_test.html" target="_blank">Test HTML</a></p>
+            <p style="font-size:smaller">see also <a href="https://chrome.google.com/webstore/detail/jabopobgcpjmedljpbcaablpmlmfcogm" target="_blank">WhatFont - Google Chrome Extension</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="GoogleFontPreviewer-extension">
+          <header>Google Font Previewer</header>
+          <section>
+            <p><a href="https://chrome.google.com/webstore/detail/engndlnldodigdjamndkplafgmkkencc" target="_blank"><img src="images/GoogleFontPreviewer.png" alt="WhatFont"></a></p>
+            <p class="sample-link"><a href="samples/webfonts_extension_test.html" target="_blank">Test HTML</a> / <a href="http://updates.html5rocks.com/" target="_blank">HTML5Rocks Updates</a></p>
+            <p style="font-size:smaller">see also <a href="https://chrome.google.com/webstore/detail/engndlnldodigdjamndkplafgmkkencc" target="_blank">Google Font Previewer - Google Chrome Extension</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="summary">
+          <header>まとめ</header>
+          <section>
+            <ul>
+              <li>WebFontsは簡単に使える！</li>
+              <li>WebFontsはいろいろなところで使える！</li>
+              <li>日本語フォントもそろそろ…(もうちょっと簡単にサブセット化できれば…)
+                <ul>
+                    <li><a href="http://decomoji.jp/" target="_blank">デコもじ</a></li>
+                    <li><a href="http://webfont.fontplus.jp/" target="_blank">フォントプラス</a></li>
+                    <li><a href="http://www.morisawa.co.jp/corp/news/20110810_03.html" target="_blank">「TypeSquare（仮称）」を発表 | 株式会社モリサワ</a></li>
+                </ul>
+              </li>
+              <li>もちろんフォントの種類が多いと重くなります</li>
+              <li>Canvasなどでは preload が必要です</li>
+              <li>まずはちょっとしたところから、使ってみるとよいのでは？</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide" id="end">
+          <section class="middle">
+            <hgroup>
+              <h1 class="endroll">
+                Enjoy WebFonts!!
+              </h1>
+            </hgroup>
+          </section>
+        </div>
+
+
+      </div> <!-- slides -->
+      <div id="speaker-note" class="invisible" style="display: none;">
+      </div> <!-- speaker note -->
+      <aside id="help" class="sidebar invisible" style="display: hidden;">
+        <table>
+          <caption>Help</caption>
+          <tbody>
+            <tr>
+              <th>Move Around</th>
+              <td>&larr;&nbsp;&rarr;</td>
+            </tr>
+            <tr>
+              <th>Source File</th>
+              <td>s</td>
+            </tr>
+            <tr>
+              <th>Change Theme</th>
+              <td>t</td>
+            </tr>
+            <tr>
+              <th>Syntax Highlight</th>
+              <td>h</td>
+            </tr>
+            <tr>
+              <th>Speaker Notes</th>
+              <td>n</td>
+            </tr>
+            <tr>
+              <th>Toggle 3D</th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th>Help</th>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </div> <!-- presentation -->
+
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+
+    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>
+    <script src="js/utils.js"></script>
+	<script src="js/zen_textarea.min.js"></script>
+	<script src="js/FileSaver.min.js"></script>
+	<script src="js/FileSaverDemo.js"></script>
+  </body>
+</html>

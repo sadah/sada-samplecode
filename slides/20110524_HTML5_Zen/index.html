@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Zen-Coding Textarea Extension</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div id="main">
+
+            <section>
+                <h1 class="inverted">Zen-Coding Textarea Extension</h1>
+                <h3 class="inverted">第17回 HTML5とか勉強会<br>2011/05/24 @sada_h</h3>
+                <img src="./images/HTML5_banner.png" alt="第0回 HTML5プログラミング&クリエイティブ・コンテスト" />
+                <script>
+                    // Delicously hacky. Look away.
+                    var message = navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ? 'Tap to navigate' : 'Navigate via keyboard';
+                    document.write( '<p style="color: rgba(0,0,0,0.1); text-shadow: none;text-align:center">('+message+')</p>' );
+                </script>
+            </section>
+
+            <section>
+                <h2>Profile</h2>
+                <ul>
+                    <li>ひらい さだあき</li>
+                    <li>SIer で働いています。</li>
+                    <li>メインは Java です。</li>
+                    <li>HTML5 や JavaScript を勉強中です。</li>
+                    <li>
+                        <a href="http://twitter.com/sada_h" target="_blank">twitter / @sada_h</a>
+                    </li>
+                    <li>
+                        <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog / はてな id:j7400157</a><br>
+                        j7400157 は学生時代の学籍番号です ＞＜
+                    </li>
+                </ul>
+                <br><p>この資料は Chrome か Firefox で見てください。</p>
+            </section>
+
+            <section>
+                <h2>What is Zen-Coding ?</h2>
+                <p>Zen-Coding をすごく簡単に表現すると</p>
+                <ul>
+                    <li>特定の省略記法の文字列を、HTMLに展開する</li>
+                    <li>様々なエディタに対応したプラグイン</li>
+                    <li>オープンソース / MITライセンス</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Zen-Coding for Textarea</h2>
+                <p>Zen-Coding を Textarea で利用するサンプル</p>
+                <ul><li><a href="http://zen-coding.ru/textarea/" target="_blank">Coding for Textarea</a></li></ul>
+                <p>他のテキストエリアでも使えたら便利だなと思って探してみると、UserScript は見つかった。</p>
+                <ul><li><a href="http://userscripts.org/scripts/show/78510" target="_blank">Zen Coding for any website for Greasemonkey</a></li></ul>
+            </section>
+
+            <section>
+                <h2>but ...</h2>
+                <ul>
+                    <li>インデントが tab<br> → スペースふたつがいい</li>
+                    <li>HTMLタグを展開すると lang=en<br> → jaがいい</li>
+                    <li>タグを展開するショートカットが Meta + E<br> → Eclipseっぽく Ctrl+Space がいい</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>and ...</h2>
+                <ul>
+                    <li>HTML をゼロから書くことが少ない。(僕は)</li>
+                    <li>文書構造を考えたりすることも少ない。(僕は)</li>
+                    <li>それでもちょっとしたHTMLは日常的に書く。(たぶんみんなも？)</li>
+                    <li>blog を書いたりするとき。あるいは Wiki や CMS にちょっとしたものを書くときに。</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h1 class="inverted">Zen-Coding Textarea Extension</h1>
+                    <h3><a href="http://bit.ly/zen_te" target="_blank">http://bit.ly/zen_te</a></h3>
+                    <p style="text-align: center"> press ↓ </p>
+                </section>
+
+                <section>
+                    <h2>Zen-Coding Textarea Extension</h2>
+                    <ul>
+                        <li>Zen-Coding for Textarea がベース</li>
+                        <li>すべての Textarea で Zen-Coding を使えるようにした。</li>
+                        <li>ショートカットキー を設定できるようにした。</li>
+                        <li>展開される文字列の一部を設定できるようにした。</li>
+                    </ul>
+                    <p style="text-align: center"> press ↓</p>
+                </section>
+
+                <section>
+                    <h2>demo</h2>
+                    <p style="text-align:center;">
+                        Expand Abbreviation / Meta + E<br>
+                        html:5>.main>(ul>li#id$*3)+p*2
+                        <textarea cols="36" rows="7" style="font-size:100%;">html:5>.main>(ul>li#id$*3)+p*2</textarea>
+                    </p>
+                    <p style="text-align: center">
+                        Please install <a href="http://bit.ly/zen_te" target="_blank">Extension</a><br>
+                        press ↓
+                    </p>
+                </section>
+
+                <section>
+                    <h2>demo</h2>
+                    <p style="text-align:center;">
+                        Wrap with Abbreviation / Meta + Shift + A<br>
+                        ul>li.browser#item$*
+                        <textarea cols="36" rows="7" style="font-size:100%;">
+Chrome
+Firefox
+Opera
+InternetExplorer</textarea>
+                    </p>
+                    <p style="text-align: center">
+                        Please install <a href="http://bit.ly/zen_te" target="_blank">Extension</a><br>
+                        press →
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h2>@zen_coding</h2>
+                <p style="text-align: center">
+                    <img src="./images/zen_tweet.png" alt="" />
+                </p>
+            </section>
+
+            <section>
+                <h2>zen-coding - Project</h2>
+                <p style="text-align: center">
+                    <img src="./images/zen_project.png" alt="" />
+                </p>
+            </section>
+
+            <section>
+                <h2>LINKS</h2>
+                <p>Zen-Coding Project</p>
+                <ul>
+                    <li>
+                        <a href="http://code.google.com/p/zen-coding/" target="_blank">zen-coding - Project Hosting on Google Code</a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/zen_coding" target="_blank">@zen_coding</a>
+                    </li>
+                    <li>
+                        <a href="http://zen-coding.ru/textarea/" target="_blank">Zen-Coding for &lt;Textarea&gt;</a>
+                    </li>
+                </ul>
+                <p>チートシートや、コードの展開について</p>
+                <ul>
+                    <li>
+                        <a href="http://code.google.com/p/zen-coding/downloads/detail?name=ZenCodingCheatSheet.pdf" target="_blank">ZenCodingCheatSheet.pdf</a>
+                    </li>
+                    <li>
+                        <a href="http://code.google.com/p/zen-coding/wiki/ZenHTMLElementsEn" target="_blank">ZenHTMLElementsEn - zen-coding</a>
+                    </li>
+                    <li>
+                        <a href="http://code.google.com/p/zen-coding/wiki/ZenCSSPropertiesEn" target="_blank">ZenCSSPropertiesEn - zen-coding</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>LINKS</h2>
+                <p>とても参考になるサイト</p>
+                <ul>
+                    <li>
+                        <a href="http://techblog.yahoo.co.jp/cat207/web_1/_zencoding/" target="_blank">マークアップ効率化 - zen-codingでコーディングを倍速に (Yahoo! JAPAN Tech Blog)</a>
+                    </li>
+                    <li>
+                        <a href="http://techblog.yahoo.co.jp/cat207/web_1/zencoding2/" target="_blank">Zen-Codingの応用でもっと超速に- 原稿ありきの変換について (Yahoo! JAPAN Tech Blog)</a>
+                    </li>
+                    <li>
+                        <a href="http://techblog.yahoo.co.jp/cat207/web_1/zencoding3/" target="_blank">HTML+CSSコーディングが10倍速くなるZen Coding (Yahoo! JAPAN Tech Blog)</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.gaspanik.com/the-first-zen-coding-book-published" target="_blank">世界初？のZen Coding本が発売されました  |  gaspanik weblog</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>LINKS</h2>
+                <p>自分で書いたもの</p>
+                <ul>
+                    <li>
+                        <a href="http://d.hatena.ne.jp/j7400157/20110307/1299506841" target="_blank">「第0回 HTML5プログラミング＆クリエイティブ コンテスト」に応募した。 - techlog</a>
+                    </li>
+                    <li>
+                        <a href="http://d.hatena.ne.jp/j7400157/20110303/1299159305" target="_blank">ぼくのかんがえたさいきょうの Zen-Coding / Zen-Coding Textarea Extension を作った - techlog</a>
+                    </li>
+                </ul>
+                <p>このプレゼンのベース</p>
+                <ul>
+                    <li>
+                        <a href="http://hakim.se/experiments/css3-3d-slideshow" target="_blank">Hakim / CSS3 3D Slideshow</a>
+                    </li>
+                    <li>
+                        <a href="http://hakim.se/experiments/css/slideshow/#/" target="_blank">CSS 3D Slideshow Online Demo</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h1>The End.</h1>
+                <h3>Thank you!</h3>
+                <h3>Enjoy Markup!</h3>
+            </section>
+        </div>
+
+        <script src="js/slideshow.js"></script>
+        <script src="js/css_browser_selector.js"></script>
+    </body>
+</html>

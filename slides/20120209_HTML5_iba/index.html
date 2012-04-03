@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>はじめての iBooks Author / 第26回HTML5とか勉強会</title>
+    
+    <meta name="description" content="はじめての iBooks Author / 第26回HTML5とか勉強会">
+    <meta name="author" content="@sada_h" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <style type="text/css">
+
+    #index{
+        background-image:url(images/top.jpg);
+        background-repeat: no-repeat;
+    }
+    #index h1, #index h3{
+        line-height:1.2em;
+        background: rgba(255, 255, 255, .75);
+        margin-left: -60px;
+        padding-left: 60px;
+        margin-right: -60px;
+        padding-right: 60px;
+    }
+    #index h1{
+        font-size:60px;
+        margin-top: 200px;
+    }
+    #index h3{
+        text-align: right;
+        margin-top: 100px;
+    }
+    ul {
+        margin-left: .75em;
+    }
+    li {
+        margin-bottom: .5em;
+    }
+    .disc li{
+        list-style-type: disc;
+    }
+
+    </style>
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>
+        [←] [→] [space] to move on.<br>
+        Please use the latest <b>Chrome</b> or <b>Safari</b> browser.
+        </q>
+    </div>
+
+    <div id="index" class="step slide" data-x="-1000" data-y="-1500" data-z="3000">
+        <h1>はじめての<br>iBooks Author</h1>
+        <h3>
+          ひらい さだあき<br>
+          2012/02/09<br>
+          第26回 HTML5とか勉強会<br>
+        </h3>
+    </div>
+
+    <div id="profile" class="step slide" data-x="-1000" data-y="-500">
+        <h3 style="font-size: 60px;line-height:1.2em;margin-bottom: 20px">profile</h1>
+        <ul>
+          <li>ひらい さだあき</li>
+          <ul>
+            <li>HTML5とか勉強会スタッフ(2012/01-)</li>
+            <li>システムエンジニア / Javaとか、いろいろ</li>
+            <li>about.me : <a href="http://about.me/sada_h" target="_blank">sada_h</a>
+            <li>twitter : <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a></li>
+            <li>blog :<a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
+          </ul>
+          <li>執筆</li>
+          <ul>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/ux/d89clip29/01.html" target="_blank">Google Developer Day 2011 Japanレポート ＠IT</a></li>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/webfonts01/01.html" target="_blank">インストールせずに、好きなWeb Fontsを使おう ＠IT</a></li>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/zencoding01/01.html" target="_blank">もしも10分の1の行数でHTMLが書けたら ＠IT</a></li>
+          </ul>
+        </ul>
+    </div>
+
+    <div id="questions" class="step" data-x="0" data-y="500" data-scale="3">
+        <p style="font-size: 80px;">Questions from me.</p>
+    </div>
+
+    <div id="q1" class="step" data-x="0" data-y="-500">
+        <p style="text-align:center;">
+        電子書籍を1冊読み終えたことある？<br>
+        (雑誌/PDF/青空文庫を含む)</p>
+    </div>
+
+    <div id="q2" class="step" data-x="0" data-y="-1500" data-z="500">
+        <p style="text-align:center;">EPUB3のファイルを<br>作ったことある？</p>
+    </div>
+
+    <div id="q3" class="step" data-x="1000" data-y="-500">
+        <p style="text-align:center">iBooks Authorで<br>本を作ったことある？</p>
+    </div>
+
+    <div id="its" class="step" data-x="0" data-y="3000" data-rotate="90" data-scale="3">
+        <h3 style="font-size:1.5em;">iBooks Authorの基本</h3>
+        <ul class="disc">
+        <li>iBooks Authorは無料</li>
+        <li>iBooks形式の電子書籍を作れる</li>
+        <li>ibooks/PDF/テキストで出力できる</li>
+        <li>ibooks形式の有償配布はiBooks Storeのみ可能</li>
+        </ul>
+    </div>
+
+    <div id="its2" class="step" data-x="0" data-y="5000" data-rotate="90">
+        <h3 style="font-size:1.5em;">iBooksフォーマット</h3>
+        <ul class="disc">
+        <li>ibooksファイルはzip圧縮されている</li>
+        <li>中身は xml や xhtml や css</li>
+        <li>EPUB2っぽいところと、EPUB3っぽいところがある</li>
+        <li>htmlはHTML5っぽい</li>
+        <li>cssにはibooksというプリフィクスが</li>
+        </ul>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>
+        <span style="text-decoration:line-through;">demo</span>
+        <b>video</b>
+        </p>
+    </div>
+
+    <div id="video" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="100" data-scale="1">
+        <iframe src="http://player.vimeo.com/video/36440960?title=0&amp;byline=0&amp;portrait=0" width="800"    height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p style="font-size:18px;"><a href="http://vimeo.com/36440960" target="_blank">First Guide of iBooks Author</a> from <a href="http://vimeo.com/user10357482" target="_blank">sada_h</a> on <a href="http://vimeo.com" target="_blank">Vimeo</a>.</p>
+        <!--
+        <video id="demoVideo" src="images/iba.m4v" controls style="width: 800px"></video>
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <a href="http://vimeo.com/36440960" target="_blank" style="font-size:18px;">Vimeo</a>
+        <script>
+        document.getElementById("playBtn").addEventListener("click",function(){
+            document.getElementById("demoVideo").play();
+        }, false);
+        document.getElementById("pauseBtn").addEventListener("click",function(){
+            document.getElementById("demoVideo").pause();
+        }, false);
+        </script>
+        -->
+    </div>
+
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="6">
+        <p>
+        You can read and download<br>
+        "First Guide Of iBooks Author."</p>
+        <a href="FirstGuideOfiBooksAuthor.ibooks" target="_blank">ibooks</a> or 
+        <a href="FirstGuideOfiBooksAuthor.pdf" target="_blank">pdf</a> .
+        Thank you.</p>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="5000" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="6">
+        <p>
+        <span class="have">Please</span> <span class="you">ask me</span> <span class="noticed">questions</span> <span class="its">at</span> <span class="in"></span> <b>beer <sup>bash</sup></b></p>
+    </div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>[←] [→] [space] to move on.</p>
+</div>
+
+<script src="js/impress.js"></script>
+
+</body>
+</html>
+
+
