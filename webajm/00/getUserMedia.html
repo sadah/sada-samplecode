@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>getUserMedia</title>
+    <style type="text/css">
+    body{
+        font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+        font-size: 80%;
+    }
+    video {
+        display:none;
+    }
+    canvas {
+        cursor:pointer;
+        display:block;
+        float:left;
+        margin: 10px;
+    }
+    #info {
+        width: 600px;
+    }
+    #out {
+        width: 220px;
+        margin: 10px;        
+    }
+    #out img{
+        width: 200px;
+    }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var v = $('#v')[0]; // video
+        var c = $('#c')[0]; // canvas
+        var ctx = c.getContext('2d');
+
+        // カメラからの入力をとってくる
+        navigator.webkitGetUserMedia(
+            'video',
+            function(stream) {
+                // videoのsrcにカメラからのstreamを渡す
+                v.src = webkitURL.createObjectURL(stream);
+            },
+            function(error) {console.log(error);}
+            );
+
+        $('#v').bind('play',function(){
+            // autoplayされたらvideoのサイズとcanvasのサイズをあわせる
+            c.width = v.videoWidth;
+            c.height = v.videoHeight;
+            // video canvasに描画する
+            doDraw(v, ctx);
+        });
+
+        $('#c').click(function(){
+            var strDataURI = c.toDataURL('image/jpeg');
+            $('#out').prepend(
+                $('<img />').attr("src",strDataURI)
+                );
+        });
+    });
+
+    function doDraw(video, context) {
+        // videoをcanvasに表示する。40msごとに再描画する。 
+        window.setInterval(function() {
+            context.drawImage(video, 0, 0);
+        }, 40);
+    }
+
+    </script>
+</head>
+<body>
+    <h1>getUserMedia Sample</h1>
+    <div id="info">
+        getUserMediaのサンプル。Chrome 18 over.<br>
+        chrome://flags で MediaStream を有効にして、Chromeを再起動してください。<br>
+        カメラがついていれば、映像がでてくるはず。<br>
+        映像をクリックすると、画面をキャプチャします。<br>
+        via. <a href="http://people.opera.com/danield/presentations/getusermedia/#1" target="_blank">getUserMedia の基本</a> & <a href="http://people.opera.com/danield/webapps/getusermedia/" target="_blank">HTML5 Camera (getUserMedia example)</a><br>
+    </div>
+    <!-- video要素自体は display:none -->
+    <video id='v' autoplay></video>
+    <!-- 映像はcanvasで表示する -->
+    <canvas id='c'></canvas><br>
+    <div id='out'></div>
+</body>
+</html>
