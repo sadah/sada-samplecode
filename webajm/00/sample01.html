@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<script>
+navigator.webkitGetUserMedia("video", function(stream) {
+var url = webkitURL.createObjectURL(stream);
+console.log(url);
+document.getElementById("v").src = url;
+});
+</script>
+<video id="v" autoplay></video>
