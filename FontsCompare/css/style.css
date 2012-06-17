@@ -1,0 +1,66 @@
+/* ===== Primary Styles ========================================================
+   Author: @sada_h
+   ========================================================================== */
+
+body{
+	font-family: 'Advent Pro', sans-serif;
+	color: #555;
+}
+
+.compare{
+	position: relative;
+	height: 80px;
+	width: 100%;
+	margin: 5px;
+}
+
+.l1, .l2{
+	position: absolute;
+	display: inline-table;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	font-size: 5em;
+}
+
+.l1 {
+	color: rgba(100,100,255,0.6);
+	font-family: 'Almendra SC', serif;
+}
+
+.l2{
+	color: rgba(255,100,100,0.6);
+	font-family: 'Almendra', serif;
+}
+
+.char {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#font-all-1, #font-all-2{
+	height: 300px;
+	margin: 5px;
+	padding: 5px;
+ 	overflow: auto;
+}
+
+label{
+	font-size: 1.5em;
+	line-height: 1.2em;
+
+}
+
+.pink{
+	color: rgba(255,100,100,0.6);
+}
+
+.blue{
+	color: rgba(100,100,255,0.6);
+}
+
+.thanks li{
+	font-size: 1.5em;
+	line-height: 1.2em;
+}
