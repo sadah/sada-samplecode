@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebFonts && Canvas</title>
+	<link href="http://fonts.googleapis.com/css?family=Monofett" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+          <header><h1>WebFonts && SVG</h1></header>
+          <section>
+            <svg width="800" height="300">
+            <defs>
+            <path id="circlePath" transform="translate(40,40) scale(2)"
+                d="M 50 0
+                C 75 0  100 25 100 50
+                C 100 75 75 100 50 100
+                C 25 100 0 75 0 50
+                C 0 25 25 0 50 0
+            z" />
+            </defs>
+            <g id="gtext" fill="#009900">
+                <text x="10" y="10" font-size="56" font-family="Monofett">
+                    <textPath xlink:href="#circlePath">Chrome+HTML5 Conference</textPath>
+                </text>
+            </g>
+            <use xlink:href="#circlePath" fill="none" stroke="red" />
+            </svg><br>
+            <button id="svg-scale">scale change</button>
+            <script>
+            var svgChanged = false;
+            document.getElementById("svg-scale").addEventListener("click", function(){
+                if(!svgChanged){
+                    document.getElementById("circlePath").setAttribute("transform", "translate(40,40) scale(4)");
+                    document.getElementById("gtext").setAttribute("transform", "scale(1)");
+                    svgChanged = true;
+                }else{
+                    document.getElementById("circlePath").setAttribute("transform", "translate(40,40) scale(2)");
+                    document.getElementById("gtext").setAttribute("transform", "scale(1)");
+                    svgChanged = false;
+                }
+            }, false);
+            </script>
+<pre>...
+&lt;g&nbsp;id=&quot;gtext&quot;&nbsp;fill=&quot;#009900&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&nbsp;x=&quot;10&quot;&nbsp;y=&quot;10&quot;&nbsp;font-size=&quot;56&quot;&nbsp;<b>font-family=&quot;Monofett&quot;&gt;</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;textPath&nbsp;xlink:href=&quot;#circlePath&quot;&gt;Chrome+HTML5&nbsp;Conference&lt;/textPath&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/text&gt;
+&lt;/g&gt;
+...</pre>
+            <p style="font-size:smaller">see also <a href="http://gihyo.jp/dev/feature/01/svg/0003?page=2" target="_blank">スタートアップ SVG：第3回　少し高度なSVG｜gihyo.jp … 技術評論社</a></p>
+</body>
+</html>
