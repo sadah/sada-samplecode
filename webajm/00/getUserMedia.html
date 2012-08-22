@@ -37,7 +37,7 @@
 
         // カメラからの入力をとってくる
         navigator.webkitGetUserMedia(
-            'video',
+            { video: true, audio: true },
             function(stream) {
                 // videoのsrcにカメラからのstreamを渡す
                 v.src = window.webkitURL.createObjectURL(stream);
