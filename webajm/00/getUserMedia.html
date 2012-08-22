@@ -40,7 +40,7 @@
             'video',
             function(stream) {
                 // videoのsrcにカメラからのstreamを渡す
-                v.src = webkitURL.createObjectURL(stream);
+                v.src = window.webkitURL.createObjectURL(stream);
             },
             function(error) {console.log(error);}
             );

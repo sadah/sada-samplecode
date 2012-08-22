@@ -43,6 +43,17 @@
         margin-right: -60px;
         padding-right: 60px;
       }
+      .aaa{
+        text-align: right;
+        background: rgba(255, 255, 255, .75);
+        margin-top: 0px;
+        padding-top: 20px;
+        margin-left: -60px;
+        padding-left: 60px;
+        margin-right: -60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+      }
 
       .slides.template-html5 > article:not(.nobackground):not(.biglogo) {
         background: url(images/HTML5_Badge_64.png) 810px 615px no-repeat;  
@@ -107,13 +118,13 @@
       </article>
 
       <article class='fill'>
+        <p>
+          <img src='images/top.jpg' style="width:100%; max-width: 100%;">
+        </p>
         <h1>
           HTML5、どう使う？
         </h1>
-        <p>
-          <img src='images/top.png'>
-        </p>
-        <p style="text-align: right; margin-top: 100px;">
+        <p class='aaa'>
           ひらい さだあき<br>
           2012/08/25<br>
           第9回 .NET中心会議 @ドリコム<br>
@@ -135,23 +146,31 @@
         </ul>
       </article>
 
-      <article>
+      <article class="smaller">
         <h3>
           Profile
         </h3>
         <ul>
           <li>ひらい さだあき</li>
           <ul>
+            <li>html5j.org / HTML5とか勉強会 スタッフ</li>
+            <li>bar foo</li>
             <li><a href="http://about.me/sada_h" target="_blank">about.me/sada_h</a> / <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a> / <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
           </ul>
+        </ul>
+        <ul>
           <li>執筆</li>
           <ul>
+            <li><a href="http://www.atmarkit.co.jp/fwcr/special/uxclip01/01.html" target="_blank">表示が速過ぎても、誰も文句は言いません CSS Nite レポート ─ ＠IT</a></li>
             <li><a href="http://www.atmarkit.co.jp/fwcr/design/ux/d89clip29/01.html" target="_blank">Google Developer Day 2011 Japanレポート - ＠IT</a></li>
             <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/webfonts01/01.html" target="_blank">インストールせずに、好きなWeb Fontsを使おう ─ ＠IT</a></li>
             <li><a href="http://www.atmarkit.co.jp/fwcr/design/tool/zencoding01/01.html" target="_blank">もしも10分の1の行数でHTMLが書けたら ＠IT</a></li>
           </ul>
+        </ul>
+        <ul>
           <li>登壇</li>
           <ul>
+            <li><a href="http://gihyo.jp/news/report/2012/02/2701" target="_blank">「はじめてのiBooks Author」レポート：「第26回　HTML5とか勉強会」活動報告｜gihyo.jp … 技術評論社</a></li>
             <li><a href="http://gihyo.jp/news/report/01/chrome-html5-conference/0007?page=2" target="_blank">「Chrome+HTML5 Conference～第20回記念HTML5とか勉強会スペシャル～」レポート：ライトニングトークレポート｜gihyo.jp … 技術評論社</a></li>          
           </ul>
         </ul>
@@ -171,10 +190,40 @@
           ウェブの進化
         </h3>
         <p>
-          <a href="http://evolutionofweb.appspot.com/" target="_blank"><img style='height: 500px' src='images/evoweb.png' alt="The evolution of the web - ウェブの進化"></a>
+          <a href="http://evolutionofweb.appspot.com/" target="_blank">
+            <img style='width:100%; max-width:100%' src='images/evoweb.png' alt="The evolution of the web - ウェブの進化">
+          </a>
         </p>
         <div class='source'>
           <a href="http://evolutionofweb.appspot.com/" target="_blank">The evolution of the web - ウェブの進化</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          The History of HTML5
+        </h3>
+        <p>
+          <a href="http://www.wix.com/flash/infographic/the-history-of-html5.html" target="_blank">
+            <img style='width:100%; max-width:100%' src='images/historyofhtml5.png' alt="The History of HTML5">
+          </a>
+        </p>
+        <div class='source'>
+          Via: <a href="http://www.wix.com/?utm_campaign=se_the_history_of_html5">Wix.com</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          HTML5: Past, Present & Future
+        </h3>
+        <p>
+          <a href="http://www.dotcominfoway.com/blog/dot-com-infoway-releases-html5-infographic">
+            <img style='width:100%; max-width:100%' src="images/html5-infographics.png" alt="HTML5 Infographic" title="HTML5 Infographic" />
+          </a>
+        </p>
+        <div class='source'>
+          <a href="http://www.dotcominfoway.com">Dot Com Infoway – Software and Mobile Application Development Company</a>
         </div>
       </article>
 
@@ -185,7 +234,7 @@
         <ul>
           <li>作業草稿（Working Draft, WD）</li>
           <li>最終草案（Last Call Working Draft）<br>
-            <span class="yellow">HTML5 は、いまここ</span>
+            <span class="yellow">HTML5はここ(<a href="http://www.w3.org/TR/2011/WD-html5-20110525/" target="_blank">2011/05/25</a>)</span>
           </li>
           <li>勧告候補（Candidate Recommendation, CR）</li>
           <li>勧告案（Proposed Recommendation, PR）</li>
@@ -226,8 +275,8 @@
         <p>Web Hypertext Application Technology Working Group
         <p>2004年に <span class="red">Apple</span>、<span class="yellow">Mozilla</span>、<span class="blue">Opera</span> が WHATWG 設立
         <p>ブラウザベンダーはWebアプリケーションのために、HTMLを拡張したかった。
-        <p>W3Cはあまり興味を示さなかった。
-        <p><span class="green">Web Applications 1.0 / Web Forms 2.0</span> を WHATWG が策定
+        <p>しかし、その当時のW3Cはあまり興味を示さなかった。
+        <p><span class="green">Web Applications 1.0 / Web Forms 2.0</span> を WHATWG が策定した。
       </article>
 
       <article class="smaller">
@@ -300,10 +349,11 @@
           どこまでHTML5?
         </h3>
         <p style="text-align: center">
-          <img style='height: 500px;' src='images/html5_renge1.png'>
+          <img style='width:90%; max-width:90%' src='images/html5_renge1.png'>
         </p>
         <div class='source'>
           <a href="http://www.slideshare.net/dynamis/html-browsers" target="_blank">HTML & Browsers</a>
+           / <a href="https://twitter.com/dynamitter" target="_blank">dynamis(@dynamitter)</a>
         </div>
       </article>
 
@@ -312,10 +362,24 @@
           どこまでHTML5?
         </h3>
         <p style="text-align: center">
-          <img style='height: 500px;' src='images/html5_renge2.png'>
+          <img style='width:90%; max-width:90%' src='images/html5_renge2.png'>
         </p>
         <div class='source'>
           <a href="http://www.slideshare.net/dynamis/html-browsers" target="_blank">HTML & Browsers</a>
+           / <a href="https://twitter.com/dynamitter" target="_blank">dynamis(@dynamitter)</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          どこまでHTML5?
+        </h3>
+        <p style="text-align: center">
+          <img style='width:85%; max-width:85%' src='images/webstandards.jpg'>
+        </p>
+        <div class='source'>
+          <a href="http://www.slideshare.net/dynamis/web-standards-infographics" target="_blank">Web Standards Infographics</a>
+           / <a href="https://twitter.com/dynamitter" target="_blank">dynamis(@dynamitter)</a>
         </div>
       </article>
 
@@ -420,6 +484,9 @@
           </li>
           <li>
             <a href="http://mobilehtml5.org/" target="_blank">Mobile HTML5 - compatibility tables for iPhone, Android, BlackBerry, Symbian, iPad and other mobile devices</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/spreadsheet/ccc?key=0AuIhlK0fCwP4dEFPR1pUWHk1QVczcV9xbFAtX19CMXc#gid=0" target="_blank">CoreMob (www.coremob.org): Mobile Web App Profile</a>
           </li>
         </ul>
       </article>
