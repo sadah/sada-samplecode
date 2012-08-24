@@ -474,27 +474,6 @@
         </div>
       </article>
 
-      <article>
-        <h3>
-          ブラウザの対応状況
-        </h3>
-        <ul>
-          <li>
-            <a href="http://html5readiness.com/" target="_blank">HTML5 Readiness</a>
-          </li>
-          <li>
-            <a href="http://caniuse.com/" target="_blank">When can I use... Support tables for HTML5, CSS3, etc</a>
-          </li>
-          <li>
-            <a href="http://mobilehtml5.org/" target="_blank">Mobile HTML5 - compatibility tables for iPhone, Android, BlackBerry, Symbian, iPad and other mobile devices</a>
-          </li>
-          <li>
-            <a href="https://docs.google.com/spreadsheet/ccc?key=0AuIhlK0fCwP4dEFPR1pUWHk1QVczcV9xbFAtX19CMXc#gid=0" target="_blank">CoreMob (www.coremob.org): Mobile Web App Profile</a>
-          </li>
-        </ul>
-      </article>
-
-
       <article class='fill'>
         <h3 style="margin-top: 5em; text-align: right; font-size: 60px;">
           Samples
@@ -534,76 +513,6 @@
             <a href="http://hellofisher.com/" target="_blank">Hello Fisher - UX Design</a>
           </li>
         </ul>
-      </article>
-
-      <article class="smaller">
-        <h3>WebFonts & Canvas</h3>
-        <section>
-          <style>
-            #canvas-area {
-              background: white;
-              -webkit-border-radius: 8px;
-              -khtml-border-radius: 8px;
-              -moz-border-radius: 8px;
-              border-radius: 8px;
-              border: 1px solid #bbb;
-            }
-          </style>
-          <p class="sample-link"><a href="samples/webfonts_canvas.html" target="_blank">WebFonts Sample</a></p>
-          <canvas id="canvas-area" width="800" height="250"></canvas><br>
-          <button id="canvas-draw1">draw text 1</button>
-          <button id="canvas-draw2">draw text 2</button>
-          <button id="canvas-rotate">rotate</button>
-
-          <script>
-            var ctx = document.getElementById("canvas-area").getContext("2d");
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            document.getElementById("canvas-draw1").addEventListener("click", function(event) {
-              ctx.fillStyle = "red";
-              ctx.font = "72px 'Monofett', cursive";
-              ctx.fillText("WebFonts", 200, 50);
-            });
-
-            document.getElementById("canvas-draw2").addEventListener("click", function(event) {
-              ctx.fillStyle = "navy";
-              ctx.font = "72px 'Cabin Sketch', cursive";
-              ctx.fillText("WebFonts", 600, 50);
-            }, false);
-
-            document.getElementById("canvas-rotate").addEventListener("click", function(event) {
-              ctx.rotate(10 * Math.PI / 180);
-              ;
-            }, false);
-
-          </script>
-          <pre>var ctx = document.getElementById("canvas-area").getContext("2d");
-ctx.textAlign    = "center";
-ctx.textBaseline = "middle";
-document.getElementById("canvas-draw1").addEventListener("click", function(event) {
-  ctx.fillStyle = "red";
-  ctx.font = <b>"72px 'Monofett', cursive";</b>
-  ctx.fillText("WebFonts", 400 , 50);
-});</pre>
-          <span style="font-family: 'Monofett';">&nbsp;</span>
-          <span style="font-family: 'Cabin Sketch';">&nbsp;</span>
-        </section>
-      </article>
-
-      <article>
-        <style>
-          #webgl-iframe {
-            border: none;
-            width: 800px;
-            height: 450px;
-          }
-        </style>
-        <header><h3>WebFonts & Canvas Effects</h3></header>
-        <section>
-          <p class="sample-link"><a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects</a> / <a href="samples/Text-WebFonts-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects + WebFonts</a><p>
-            <iframe name="canvas-effects" scrolling="yes" src="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" id="webgl-iframe"></iframe>
-          <p style="font-size:smaller">see also <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/" target="_blank">HTML5 Rocks - Typographic effects in canvas</a></p>
-        </section>
       </article>
 
       <article>
@@ -701,6 +610,117 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
             <img style='height: 450px;' src="images/html5terminal.png" alt="HTML5 Terminal"><br>
             HTML5 Terminal
           </a>
+      </article>
+
+      <article class="smaller">
+        <h3>WebFonts & Canvas</h3>
+        <section>
+          <style>
+            #canvas-area {
+              background: white;
+              -webkit-border-radius: 8px;
+              -khtml-border-radius: 8px;
+              -moz-border-radius: 8px;
+              border-radius: 8px;
+              border: 1px solid #bbb;
+            }
+          </style>
+          <p class="sample-link"><a href="samples/webfonts_canvas.html" target="_blank">WebFonts Sample</a></p>
+          <canvas id="canvas-area" width="800" height="250"></canvas><br>
+          <button id="canvas-draw1">draw text 1</button>
+          <button id="canvas-draw2">draw text 2</button>
+          <button id="canvas-rotate">rotate</button>
+
+          <script>
+            var ctx = document.getElementById("canvas-area").getContext("2d");
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+              ctx.fillStyle = "red";
+              ctx.font = "72px 'Monofett', cursive";
+              ctx.fillText("WebFonts", 200, 50);
+            });
+
+            document.getElementById("canvas-draw2").addEventListener("click", function(event) {
+              ctx.fillStyle = "navy";
+              ctx.font = "72px 'Cabin Sketch', cursive";
+              ctx.fillText("WebFonts", 600, 50);
+            }, false);
+
+            document.getElementById("canvas-rotate").addEventListener("click", function(event) {
+              ctx.rotate(10 * Math.PI / 180);
+              ;
+            }, false);
+
+          </script>
+          <pre>var ctx = document.getElementById("canvas-area").getContext("2d");
+ctx.textAlign    = "center";
+ctx.textBaseline = "middle";
+document.getElementById("canvas-draw1").addEventListener("click", function(event) {
+  ctx.fillStyle = "red";
+  ctx.font = <b>"72px 'Monofett', cursive";</b>
+  ctx.fillText("WebFonts", 400 , 50);
+});</pre>
+          <span style="font-family: 'Monofett';">&nbsp;</span>
+          <span style="font-family: 'Cabin Sketch';">&nbsp;</span>
+        </section>
+      </article>
+
+      <article>
+        <style>
+          #webgl-iframe {
+            border: none;
+            width: 800px;
+            height: 450px;
+          }
+        </style>
+        <header><h3>WebFonts & Canvas Effects</h3></header>
+        <section>
+          <p class="sample-link"><a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects</a> / <a href="samples/Text-WebFonts-Effects.html#neon+rainbow+jitter" target="canvas-effects">Effects + WebFonts</a><p>
+            <iframe name="canvas-effects" scrolling="yes" src="http://www.html5rocks.com/en/tutorials/canvas/texteffects/Text-Effects.html#neon+rainbow+jitter" id="webgl-iframe"></iframe>
+          <p style="font-size:smaller">see also <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/" target="_blank">HTML5 Rocks - Typographic effects in canvas</a></p>
+        </section>
+      </article>
+
+      <article class="fill">
+        <iframe src="http://sadah.github.com/sada-samplecode/FontsCompare/"></iframe>
+        <div class='source'>
+          <a href="http://sadah.github.com/sada-samplecode/FontsCompare/" target="_blank">Google Web Fonts Compare</a>
+        </div>
+      </article>
+
+      <article class="fill">
+        <iframe src="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html"></iframe>
+        <div class='source'>
+          <a href="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html" target="_blank">getUserMedia</a>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+      <article>
+        <h3>
+          ブラウザの対応状況
+        </h3>
+        <ul>
+          <li>
+            <a href="http://html5readiness.com/" target="_blank">HTML5 Readiness</a>
+          </li>
+          <li>
+            <a href="http://caniuse.com/" target="_blank">When can I use... Support tables for HTML5, CSS3, etc</a>
+          </li>
+          <li>
+            <a href="http://mobilehtml5.org/" target="_blank">Mobile HTML5 - compatibility tables for iPhone, Android, BlackBerry, Symbian, iPad and other mobile devices</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/spreadsheet/ccc?key=0AuIhlK0fCwP4dEFPR1pUWHk1QVczcV9xbFAtX19CMXc#gid=0" target="_blank">CoreMob (www.coremob.org): Mobile Web App Profile</a>
+          </li>
+        </ul>
       </article>
 
       <article class='fill'>
