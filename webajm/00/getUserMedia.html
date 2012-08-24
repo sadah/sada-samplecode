@@ -46,7 +46,7 @@
             );
 
         $('#v').bind('play',function(){
-            // playされたらvideoのサイズとcanvasのサイズをあわせる
+            // autoplayされたらvideoのサイズとcanvasのサイズをあわせる
             c.width = v.videoWidth;
             c.height = v.videoHeight;
             // video canvasに描画する
@@ -59,15 +59,6 @@
                 $('<img />').attr("src",strDataURI)
                 );
         });
-
-        $('#play').click(function(){
-            $('#v')[0].play();
-        });
-
-        $('#pause').click(function(){
-            $('#v')[0].pause();
-        });
-
     });
 
     function doDraw(video, context) {
@@ -88,12 +79,8 @@
         映像をクリックすると、画面をキャプチャします。<br>
         via. <a href="http://people.opera.com/danield/presentations/getusermedia/#1" target="_blank">getUserMedia の基本</a> & <a href="http://people.opera.com/danield/webapps/getusermedia/" target="_blank">HTML5 Camera (getUserMedia example)</a><br>
     </div>
-    <div>
-        <button id="play">play</button>
-        <button id="pause">pause</button>
-    </div>
     <!-- video要素自体は display:none -->
-    <video id='v'></video>
+    <video id='v' autoplay></video>
     <!-- 映像はcanvasで表示する -->
     <canvas id='c'></canvas><br>
     <div id='out'></div>
