@@ -145,6 +145,7 @@
           <li>History</li>
           <li>HTML5</li>
           <li>Samples</li>
+          <li>HTML5 どうつかう？</li>
           <li>まとめ</li>
         </ul>
       </article>
@@ -325,7 +326,7 @@
           HTML5
         </h3>
         <p>
-          <img src='images/html5_top.jpg'>
+          <img src='images/top1.png' style="width:100%; max-width: 100%;">
         </p>
       </article>
 
@@ -689,19 +690,32 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
         </div>
       </article>
 
-      <article class="fill">
-        <iframe src="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html"></iframe>
-        <div class='source'>
-          <a href="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html" target="_blank">getUserMedia</a>
-        </div>
+      <article class="">
+        <h3>getUserMedia</h3>
+        <section>
+          <pre>        // カメラからの入力をとってくる
+        navigator.webkitGetUserMedia(
+            { video: true, audio: true },
+            function(stream) {
+                // videoのsrcにカメラからのstreamを渡す
+                v.src = window.webkitURL.createObjectURL(stream);
+            },
+            function(error) {console.log(error);}
+        );</pre>
+          <p class="sample-link">
+            <a href="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html" target="_blank">getUserMedia Sample</a>
+          </p>
+        </section>
       </article>
 
-
-
-
-
-
-
+      <article class='fill'>
+        <h3 style="margin-top: 8em; text-align: right; font-size: 60px;">
+          HTML5 どう使う？
+        </h3>
+        <p>
+          <img src='images/top5.jpg' style="width:100%; max-width: 100%;">
+        </p>
+      </article>
 
       <article>
         <h3>
@@ -720,6 +734,31 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
           <li>
             <a href="https://docs.google.com/spreadsheet/ccc?key=0AuIhlK0fCwP4dEFPR1pUWHk1QVczcV9xbFAtX19CMXc#gid=0" target="_blank">CoreMob (www.coremob.org): Mobile Web App Profile</a>
           </li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          HTML5 使いどころ。(独断と偏見で)
+        </h3>
+        <ul class="build">
+          <li>
+            Mobile / Smart Device
+          </li>
+          <ul>
+            <li>jQuery Mobile</li>
+            <li>HTML5 MarkUp</li>
+            <li>CSS3</li>
+            <li>geoLocation API</li>
+          </ul>
+          <li>
+            Offline / Storage
+          </li>
+          <ul>
+            <li>App Cache</li>
+            <li>WebStorage</li>
+            <li>(Web SQL) / (Indexed DB)</li>
+          </ul>
         </ul>
       </article>
 
