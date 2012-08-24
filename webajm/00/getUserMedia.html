@@ -61,11 +61,11 @@
         });
 
         $('#play').click(function(){
-            $('#v').play();
+            $('#v')[0].play();
         });
 
         $('#pause').click(function(){
-            $('#v').pause();
+            $('#v')[0].pause();
         });
 
     });
@@ -91,9 +91,9 @@
     <div>
         <button id="play">play</button>
         <button id="pause">pause</button>
-    </div>>
+    </div>
     <!-- video要素自体は display:none -->
-    <video id='v' autoplay></video>
+    <video id='v'></video>
     <!-- 映像はcanvasで表示する -->
     <canvas id='c'></canvas><br>
     <div id='out'></div>
