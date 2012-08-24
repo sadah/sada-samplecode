@@ -145,7 +145,7 @@
           <li>History</li>
           <li>HTML5</li>
           <li>Samples</li>
-          <li>HTML5 どうつかう？</li>
+          <li>HTML5、どうつかう？</li>
           <li>まとめ</li>
         </ul>
       </article>
@@ -158,7 +158,7 @@
           <li>ひらい さだあき</li>
           <ul>
             <li>html5j.org / HTML5とか勉強会 スタッフ</li>
-            <li>bar foo</li>
+            <li id="com"></li>
             <li><a href="http://about.me/sada_h" target="_blank">about.me/sada_h</a> / <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a> / <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
           </ul>
         </ul>
@@ -326,7 +326,7 @@
           HTML5
         </h3>
         <p>
-          <img src='images/top1.png' style="width:100%; max-width: 100%;">
+          <img src='images/top1.jpg' style="width:100%; max-width: 100%;">
         </p>
       </article>
 
@@ -739,16 +739,16 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
 
       <article>
         <h3>
-          HTML5 使いどころ。(独断と偏見で)
+          HTML5 使いどころ。(独断と偏見で！)
         </h3>
         <ul class="build">
           <li>
             Mobile / Smart Device
           </li>
           <ul>
-            <li>jQuery Mobile</li>
             <li>HTML5 MarkUp</li>
             <li>CSS3</li>
+            <li>jQuery Mobile</li>
             <li>geoLocation API</li>
           </ul>
           <li>
@@ -758,6 +758,150 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
             <li>App Cache</li>
             <li>WebStorage</li>
             <li>(Web SQL) / (Indexed DB)</li>
+          </ul>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Webサイト / Webアプリケーション
+        </h3>
+        <ul>
+          <li>Enterprise</li>
+          <li>B2C</li>
+          <li>Social Game</li>
+        </ul>
+        <ul class="build">
+          <li>PCからしか使わない業務アプリケーション</li>
+          <li>いろいろなブラウザからアクセスされるB2Cサイト</li>
+          <li>スマホ、ガラケーに対応したソーシャルゲーム</li>
+        </ul>
+        <p class="build red"><span>
+          いろいろありますが、既存アプリケーションのスマートデバイス対応って、けっこう多くないですか？
+        </span></p>
+      </article>
+
+      <article>
+        <h3>
+          僕の所感。
+        </h3>
+        <p>PC向け業務アプリケーションを、HTML5対応してもあまり嬉しくないような。doctype変えました！とか。</p> 
+        <p>B2Cでも、全てをHTML5でリニューアルするメリットって、そんなに大きくない気がする。</p> 
+        <p>キャンペーンサイトとか、ゼロから作るサイトなら、最初からHTML5にしておくといいと思う。レスポンシブウェブデザインを利用したり。</p>
+        <p>スマホ向けサイトでは、HTML5使わないと、むしろ辛そう。</p>
+        <p>業務アプリケーションも、スマホ対応するならHTML5を使ったほうが幸せかも。</p>
+        <p>(もちろんネイティブもいいと思う)</p>
+      </article>
+
+      <article>
+        <h3>
+          Mobile / Smart Device
+        </h3>
+        <ul>
+          <li>HTML5 Markup</li>
+          <ul>
+            <li>セマンティクスを意識して。</li>
+            <li>もちろん div だらけでも動くけど、先を見越してちゃんとマークアップするほうがいい。</li>
+          </ul>
+        </ul>
+        <ul>
+          <li>CSS3</li>
+          <ul>
+            <li>スマホは非力。ネットワークも細い。</li>
+            <li>画像の代わりにCSS3でデザインを。</li>
+            <li>アニメーションが必要なら、まずはCSSで。(でもデバイスごとに要検証)</li>
+            <li>CSS3でできることはたくさんある。</li>
+          </ul>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Mobile / Smart Device
+        </h3>
+        <ul>
+          <li>jQuery Mobile</li>
+          <ul>
+            <li>みんな使ってる！</li>
+            <li>対応しているデバイスの多さが魅力。</li>
+            <li>バージョンアップが早いので、ついていくのはちょっと大変。</li>
+            <li>JavaScriptなしで、それなりの見た目が作れるけど、いろいろやるならやっぱりJavaScriptを使いたい。</li>
+            <li>ページ遷移など、基本的な仕組みは理解する必要がある。</li>
+            <li>パフォーマンスや、セキュリティにも気を付ける。</li>
+          </ul>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Mobile / Smart Device
+        </h3>
+        <ul>
+          <li>geoLocation API</li>
+          <ul>
+            <li>とりあえず使いたいと言われることが多いような。</li>
+            <li>コードは簡単だけど、精度などを考えると大変。</li>
+            <li>測位方法はわからない。バッテリーの消耗にも注意が必要。</li>
+          </ul>
+        </ul>
+        <pre>
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+              position.coords.latitude;
+              lng = position.coords.longitude;
+              console.log(lat);
+              console.log(lng);
+          }
+        );</pre>
+      </article>
+
+      <article>
+        <h3>
+          Offline / Storage
+        </h3>
+        <ul>
+          <li>App Cache</li>
+          <ul>
+            <li>多くのブラウザが対応している。</li>
+            <li>キャッシュマニフェストにキャッシュするファイルを指定する。</li>
+            <li>静的ファイルのキャッシュに。</li>
+            <li>マニフェストを更新しないと、キャッシュが新しくならない。</li>
+            <li>JavaScriptからキャッシュの進捗状況のイベントを取得できる。</li>
+          </ul>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Offline / Storage
+        </h3>
+        <ul>
+          <li>Web Storage</li>
+          <ul>
+            <li>Session Storage と Local Storage</li>
+            <li>key-value形式で、手軽にデータを保存できる</li>
+            <li>保存できるのはテキストデータのみ。オブジェクトは保存できない。</li>
+            <li>同期処理で保存する。</li>
+          </ul>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Offline / Storage
+        </h3>
+        <ul>
+          <li>Indexed DB</li>
+          <ul>
+            <li>Object Storeにデータを保存する。</li>
+            <li>JavaScriptのオブジェクトも保存できる。</li>
+            <li>非同期で保存する。</li>
+            <li>まだまだ実装中。</li>
+          </ul>
+          <li>Web SQL Database</li>
+          <ul>
+            <li>仕様策定が中断されたけど、スマートデバイスはけっこう対応している</li>
+            <li>おすすめはできないけど、どうしても使いたければいいかも。</li>
           </ul>
         </ul>
       </article>
@@ -773,20 +917,17 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
 
       <article>
         <h3>
-          HTML5 これまでと、これから。
+          HTML5、どう使う？
         </h3>
         <ul class="build">
           <li>
-            W3Cとブラウザベンダー、ブラウザの独自実装、いろいろありました。
+            すべてをいっぺんに変える必要はありません。
           </li>
           <li>
-            標準を作るため、いまはみんなで協力している。
+            使いやすいところから。
           </li>
           <li>
-            これまでとこれから、変化が大きいぶん、面白いかも。
-          </li>
-          <li>
-            まだ勧告にはなっていないけど、いろいろなところですでに使われている。
+            まだ勧告にはなっていないけど、いろいろなところですでに使われています。
           </li>
           <li>
             これからHTML5で、文書はよりセマンティックに
