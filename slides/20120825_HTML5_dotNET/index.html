@@ -700,15 +700,16 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
       <article class="">
         <h3>getUserMedia</h3>
         <section>
-          <pre>        // カメラからの入力をとってくる
-        navigator.webkitGetUserMedia(
-            { video: true, audio: true },
-            function(stream) {
-                // videoのsrcにカメラからのstreamを渡す
-                v.src = window.webkitURL.createObjectURL(stream);
-            },
-            function(error) {console.log(error);}
-        );</pre>
+          <pre>
+  // カメラからの入力をとってくる
+  navigator.webkitGetUserMedia(
+    { video: true, audio: true },
+    function(stream) {
+      // videoのsrcにカメラからのstreamを渡す
+      v.src = window.webkitURL.createObjectURL(stream);
+    },
+    function(error) {console.log(error);}
+  );</pre>
           <p class="sample-link">
             <a href="http://sadah.github.com/sada-samplecode/webajm/00/getUserMedia.html" target="_blank">getUserMedia Sample</a>
           </p>
@@ -855,14 +856,14 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
           </ul>
         </ul>
         <pre>
-        navigator.geolocation.getCurrentPosition(
-          function (position) {
-              position.coords.latitude;
-              lng = position.coords.longitude;
-              console.log(lat);
-              console.log(lng);
-          }
-        );</pre>
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      position.coords.latitude;
+      lng = position.coords.longitude;
+      console.log(lat);
+      console.log(lng);
+    }
+  );</pre>
       </article>
 
       <article>
