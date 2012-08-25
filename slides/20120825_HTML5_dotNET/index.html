@@ -46,7 +46,7 @@
         margin-right: -60px;
         padding-right: 60px;
       }
-      .aaa{
+      .title_profile{
         text-align: right;
         background: rgba(255, 255, 255, .75);
         margin-top: 0px;
@@ -60,7 +60,6 @@
 
       .slides.template-html5 > article:not(.nobackground):not(.biglogo) {
         background: url(images/HTML5_Badge_64.png) 810px 615px no-repeat;  
-
         background-color: white;  
       } 
 
@@ -104,6 +103,9 @@
       .slides.template-html5 .white {
         color: white;
       }
+      .slides p{
+        line-height: 1.5em;
+      }
     </style>
   </head>
 
@@ -127,7 +129,7 @@
         <h1>
           HTML5、どう使う？
         </h1>
-        <p class='aaa'>
+        <p class='title_profile'>
           ひらい さだあき<br>
           2012/08/25<br>
           第9回 .NET中心会議 @ドリコム<br>
@@ -313,7 +315,7 @@
         <h3>
           HTML5 Abstract
         </h3>
-        <p style="font-size:1.2em;line-height:1.5em;">
+        <p style="font-size:1.2em;line-height:1.2em;">
           This specification defines the 5th major revision of the core language of the World Wide Web: the Hypertext Markup Language (HTML). In this version, <span class="red">new features are introduced to help Web application authors</span>, <span class="blue">new elements are introduced based on research into prevailing authoring practices</span>, <span class="green">and special attention has been given to defining clear conformance criteria for user agents in an effort to improve interoperability.</span>
         </p>
         <div class='source'>
@@ -414,7 +416,7 @@
         <p style="text-align:center;">
           <img src="images/HTML5_Device_Access_256.png" alt="Device Access" title="Device Access" />
         </p>
-        <p>Beginning with the Geolocation API, Web Applications can present rich, device-aware features and experiences. Incredible device access innovations are being developed and implemented, from audio/video input access to microphones and cameras, to local data such as contacts & events, and even tilt orientation.</p>
+        <p style="line-height: 1.2em">Beginning with the Geolocation API, Web Applications can present rich, device-aware features and experiences. Incredible device access innovations are being developed and implemented, from audio/video input access to microphones and cameras, to local data such as contacts & events, and even tilt orientation.</p>
         <div class='source'>
           <a href="http://www.w3.org/html/logo/#the-technology" target="_blank">W3C HTML5 Logo</a>
         </div>
@@ -505,15 +507,20 @@
             <a href="http://mediaqueri.es/" target="_blank">Media Queries</a>
           </li>
           <li>
-            <a href="http://www.w3.org/" target="_blank">World Wide Web Consortium (W3C)</a>
+            <a href="http://bostonglobe.com/" target="_blank">The Boston Globe</a>
           </li>
           <li>
-            <a href="http://dev.opera.com/labs" target="_blank">Labs - Dev.Opera</a>
+            <a href="http://www.w3.org/" target="_blank">World Wide Web Consortium (W3C)</a>
           </li>
           <li>
             <a href="http://hellofisher.com/" target="_blank">Hello Fisher - UX Design</a>
           </li>
         </ul>
+        <pre>
+ @media screen and (min-width:480px){}
+ @media screen and (min-width:768px){}
+ @media screen and (min-width:1024px){}
+ @media screen and (min-width:1280px){}</pre>
       </article>
 
       <article>
@@ -734,8 +741,12 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
           <li>
             <a href="https://docs.google.com/spreadsheet/ccc?key=0AuIhlK0fCwP4dEFPR1pUWHk1QVczcV9xbFAtX19CMXc#gid=0" target="_blank">CoreMob (www.coremob.org): Mobile Web App Profile</a>
           </li>
+          <li>
+            <a href="http://findmebyip.com/litmus/" target="_blank">HTML5 & CSS3 Support, Web Design Tools & Support - FindMeByIP - CSS3 & HTML5 Browser Support</a>
+          </li>
         </ul>
       </article>
+
 
       <article>
         <h3>
@@ -786,8 +797,7 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
           僕の所感。
         </h3>
         <p>PC向け業務アプリケーションを、HTML5対応してもあまり嬉しくないような。doctype変えました！とか。</p> 
-        <p>B2Cでも、全てをHTML5でリニューアルするメリットって、そんなに大きくない気がする。</p> 
-        <p>キャンペーンサイトとか、ゼロから作るサイトなら、最初からHTML5にしておくといいと思う。レスポンシブウェブデザインを利用したり。</p>
+        <p>キャンペーンサイトとか、ゼロから作るサイトなら、最初からHTML5にしておくといいと思う。<br>レスポンシブウェブデザインを利用したり。</p>
         <p>スマホ向けサイトでは、HTML5使わないと、むしろ辛そう。</p>
         <p>業務アプリケーションも、スマホ対応するならHTML5を使ったほうが幸せかも。</p>
         <p>(もちろんネイティブもいいと思う)</p>
@@ -906,6 +916,26 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
         </ul>
       </article>
 
+      <article>
+        <h3>
+          いろいろ確認するために
+        </h3>
+        <ul>
+          <li>
+            <a href="http://www.benjaminkeen.com/open-source-projects/smaller-projects/responsive-design-bookmarklet/" target="_blank">Responsive Design bookmarklet | BenjaminKeen.com</a>
+          </li>
+          <li>
+            <a href="http://labs.adobe.com/technologies/shadow/" target="_blank">Adobe Shadow | preview mobile web - Adobe Labs</a>
+          </li>
+          <li>
+            <a href="https://browserlab.adobe.com/ja-jp/" target="_blank">ブラウザーテスト | Adobe BrowserLab</a>
+          </li>
+          <li>
+            <a href="http://www.microsoft.com/ja-jp/download/details.aspx?id=2020" target="_blank">Download: Expression Web SuperPreview - Microsoft Download Center - Download Details</a>
+          </li>
+        </ul>
+      </article>
+
       <article class='fill'>
         <h3 style="margin-top: 3em; text-align: right; font-size: 60px;">
           まとめ
@@ -921,19 +951,22 @@ document.getElementById("canvas-draw1").addEventListener("click", function(event
         </h3>
         <ul class="build">
           <li>
-            すべてをいっぺんに変える必要はありません。
+            すべてを、一度に変える必要はありません。
           </li>
           <li>
             使いやすいところから。
           </li>
           <li>
-            まだ勧告にはなっていないけど、いろいろなところですでに使われています。
+            安定している仕様から。
           </li>
           <li>
-            これからHTML5で、文書はよりセマンティックに
+            まだ正式な勧告にはなっていないけど、HTML5はいろいろなところで使われています。
           </li>
           <li>
-            これからHTML5で、Webはもっとアプリケーションに
+            HTML5で、文書はよりセマンティックに。
+          </li>
+          <li>
+            HTML5で、Webはもっとアプリケーションに。
           </li>
         </ul>
       </article>
