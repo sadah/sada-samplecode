@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+    window.onload=function(){
+        var elm = document.getElementById("exec");
+        elm.addEventListener("click", function (e) {
+            var log = document.getElementById("log");
+            var js  = document.getElementById("js")
+            log.innerHTML += String(eval(js.value)).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "<br />";
+        }, false);
+    }
+    </script>
+</head>
+<body>
+    <textarea name="js" id="js" cols="30" rows="10">alert(0);
+document.body.innerHTML;</textarea><br />
+    <button type="button" id="exec">exec</button><br />
+    <div id="log"></div>
+</body>
+</html>
