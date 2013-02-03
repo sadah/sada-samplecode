@@ -10,11 +10,10 @@
             try{
                 var log = document.getElementById("log");
                 var js  = document.getElementById("js")
-                log.innerHTML += String(eval(js.value)).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "<br />";
+                log.innerHTML += String(eval(js.value)).replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n\r?/g, '<br />'); + "<br />";
             }catch(err){
                 log.innerHTML += String(err).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "<br />";
             }
-
         }, false);
     }
     </script>
