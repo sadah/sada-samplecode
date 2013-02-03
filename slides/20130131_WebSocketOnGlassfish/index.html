@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>WebSocket on Glassfish</title>
+  <meta name="description" content="WebSocket on Glassfish">
+  <meta name="author" content="Sadaaki HIRAI">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <link href="//fonts.googleapis.com/css?family=Belleza" rel="stylesheet" type="text/css">
+  <style>
+  html body {
+    background:url("images/light_wool.png");
+    background-repeat: repeat;
+  }
+  .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+    letter-spacing: 0em;
+    text-transform: none;
+    font-family: "optima", "Belleza", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Osaka", Verdana, Arial, sans-serif;
+    text-shadow: -1px 1px rgba(255,255,255,1);
+  }
+  .reveal{
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.5;
+    font-family: "optima", "Belleza", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Osaka", Verdana, Arial, sans-serif;
+  }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h1>WebSocket on Glassfish</h1>
+        <h3>Java♡HTML5 Night 2013/01/31</h3>
+        <p>
+          <small><a href="http://sadah.github.com" target="_blank">ひらい さだあき</a> / <a href="http://twitter.com/sada_h">@sada_h</a></small>
+        </p>
+      </section>
+
+      <section>
+        <h2>ひらい さだあき</h2>
+        <ul>
+          <li>html5j.org スタッフ</li>
+          <li>HTML5とか勉強会 スタッフ</li>
+          <li><a href="http://sadah.github.com" target="_blank">sadah.github.com</a> / <a href="http://twitter.com/sada_h" target="_blank">@sada_h</a> / <a href="http://d.hatena.ne.jp/j7400157" target="_blank">techlog</a></li>
+          <li>Ruby / Rails / HTML5 / JavaScript / Java</li>
+          <li>Kakaku.com, Inc. Engineer</li>
+            <ul>
+              <li><a href="http://tabelog.com/" target="_blank">グルメ・レストランガイド [食べログ]</a></li>
+              <li><a href="http://yoyaku.tabelog.com/" target="_blank">レストラン予約サイト [cena(チェーナ)]</a></li>
+            </ul>
+          </li>
+        </ul>
+        <p><img src="images/tabelog.gif" alt="食べログ" style="vertical-align: middle; border:0px;"> <img src="images/cena.png" alt="cena(チェーナ)" style="vertical-align: middle; border:0px;"></p>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+##Versions
+* Java 1.7.0_11
+* NetBeans 7.2.1
+* Glassfish 4.0 b71
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+## Install
+* JavaとNebBeans(JavaEE)をインストール
+ * <a href="http://netbeans.org/downloads/index.html?pagelang=ja" target="_blank">NetBeans IDE ダウンロード</a>
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+## Install
+* Glassfishのベータ版をインストール
+ * glassfish-4.0-web-b71.zip
+ * javaee-api-7.0-b72-javadoc.jar
+ * <a href="http://dlc.sun.com.edgesuite.net/glassfish/4.0/promoted/" target="_blank">Index of /glassfish/4.0/promoted/</a>
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+## Live Coding
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+## まとめ
+アノテーションで記述出来るのが嬉しい。
+
+Servlet書くより楽じゃない？
+
+WebSocketの使い所を考えて、Javaのよいところを活かしたい。
+        </script>
+      </section>
+
+      <section>
+        <h1>THE END</h1>
+        <h3>http://bit.ly/java_loves_html5_ws</h3>
+        <h3>Java♡HTML5 Night 2013/01/31</h3>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+
+</body>
+</html>
