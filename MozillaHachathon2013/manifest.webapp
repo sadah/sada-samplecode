@@ -1,0 +1,13 @@
+{
+  "name": "My First App",
+  "description": "My First Firefox OS App",
+  "launch_path": "/MozillaHachathon2013/index.html",
+  "icons": {
+    "128": "/MozillaHachathon2013/apple-touch-icon-128x128-precomposed.png"
+  },
+  "developer": {
+    "name": "@sada_h",
+    "url": "http://sadah.github.io"
+  },
+  "default_locale": "ja"
+}
